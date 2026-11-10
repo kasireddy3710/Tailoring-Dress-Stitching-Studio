@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Measurement | AUREL Tailoring &amp; Dress Stitching Studio</title>
+<meta name="description" content="Reserve a measurement slot at the AUREL studio. Timeless &amp; classic tailoring.">
+<meta name="color-scheme" content="light dark">
+<script>
+(function(){try{var t=localStorage.getItem('aurel-theme'),d=localStorage.getItem('aurel-dir');
+if(t)document.documentElement.setAttribute('data-theme',t);
+if(d)document.documentElement.setAttribute('dir',d);}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --primary:#185B48;--secondary:#C5A66A;--on-primary:#fff;--on-secondary:#10241d;
+  --bg:#fff;--bg-alt:#f5f2eb;--surface:#fff;--text:#1c2a25;--muted:#5d6b65;
+  --line:rgba(24,91,72,.16);--shadow:0 18px 40px -18px rgba(12,33,27,.35);--shadow-lg:0 30px 60px -20px rgba(12,33,27,.45);
+  --radius:14px;--header-h:85px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+[data-theme="dark"]{
+  --primary:#0C211B;--secondary:#D6BB83;--on-primary:#f4efe3;--on-secondary:#0C211B;
+  --bg:#08130f;--bg-alt:#112019;--surface:#172721;--text:#ecf1ee;--muted:#a7b6af;
+  --line:rgba(214,187,131,.22);--shadow:0 18px 40px -18px rgba(0,0,0,.7);--shadow-lg:0 30px 60px -20px rgba(0,0,0,.8);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg-alt);overflow-x:clip;transition:background .4s var(--ease),color .4s var(--ease)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-display);line-height:1.2;margin:0 0 .5em;font-weight:600}
+p{margin:0 0 1em}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid var(--secondary);outline-offset:3px}
+.container{width:min(100% - 40px,1200px);margin-inline:auto}
+
+/* Header: logo + toggles only, no nav links */
+.site-header{position:sticky;top:0;z-index:100;height:var(--header-h);background:#fff;border-bottom:1px solid var(--line)}
+[data-theme="dark"] .site-header{background:#12241e}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:19px}
+.logo-img{width:53px;height:53px;object-fit:contain;transition:transform .6s var(--ease)}
+.brand:hover .logo-img{transform:rotateY(360deg)}
+.logo-dark{display:none}
+[data-theme="dark"] .logo-light{display:none}
+[data-theme="dark"] .logo-dark{display:block}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:var(--font-display);font-size:1.55rem;font-weight:700;letter-spacing:.14em}
+.brand-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.header-actions{display:flex;align-items:center;gap:12px}
+.icon-btn{width:42px;height:42px;display:grid;place-items:center;background:transparent;color:var(--text);border:2px solid var(--line);border-radius:50%;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),transform .4s var(--ease)}
+.icon-btn:hover{background:var(--secondary);color:var(--on-secondary);transform:rotate(180deg)}
+.i-sun{display:none}
+[data-theme="dark"] .i-sun{display:block}
+[data-theme="dark"] .i-moon{display:none}
+
+/* Page */
+.page{position:relative;padding:72px 0 96px;overflow:hidden;isolation:isolate}
+.page::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 15% 10%,rgba(197,166,106,.16),transparent 45%),radial-gradient(circle at 90% 90%,rgba(24,91,72,.12),transparent 50%)}
+.grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:center}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:#8a6d33;margin-bottom:14px;position:relative;padding-inline:34px}
+[data-theme="dark"] .eyebrow{color:var(--secondary)}
+.eyebrow::before,.eyebrow::after{content:'';position:absolute;top:50%;width:24px;height:1px;background:currentColor}
+.eyebrow::before{inset-inline-start:0}.eyebrow::after{inset-inline-end:0}
+.title{font-size:clamp(2.1rem,4vw,3.3rem)}
+.intro{color:var(--muted);max-width:460px}
+.facts{display:grid;gap:12px;margin:28px 0 0}
+.facts li{display:flex;align-items:center;gap:12px;font-size:.94rem}
+.facts svg{color:var(--secondary);flex:none;padding:3px;border:1.5px solid var(--secondary);border-radius:50%;width:26px;height:26px}
+ul{margin:0;padding:0;list-style:none}
+
+/* Animation 1: arched photo frame reveal + orbiting gold ring */
+.visual{position:relative;isolation:isolate;width:min(100%,380px);margin:50px auto 0;perspective:1000px}
+.ring{position:absolute;z-index:-1;width:114%;aspect-ratio:1;top:50%;inset-inline-start:50%;translate:-50% -50%;border-radius:50%;border:1.5px dashed rgba(197,166,106,.7);animation:spin 28s linear infinite}
+.ring::before{content:'';position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--secondary);box-shadow:0 0 16px var(--secondary)}
+.frame{margin:0;padding:10px;border:2px solid var(--secondary);border-radius:200px 200px 24px 24px;background:var(--surface);box-shadow:var(--shadow-lg);animation:archIn 1.5s var(--ease) .1s both}
+.frame .media{overflow:hidden;aspect-ratio:4/5;border-radius:190px 190px 16px 16px;background:var(--bg-alt)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;bottom:-24px;inset-inline-start:-20px;width:98px;height:98px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.1;background:var(--primary);color:var(--on-primary);border:2px solid var(--secondary);box-shadow:var(--shadow)}
+.badge span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--secondary)}
+.badge strong{font-family:var(--font-display);font-size:1.5rem}
+
+/* Form card */
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:56px 40px 40px;overflow:hidden}
+/* Animation 2: moving measuring tape along the card top */
+.tape{position:absolute;top:0;inset-inline:0;height:16px;background:var(--primary);border-bottom:2px solid var(--secondary);overflow:hidden}
+.tape::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(to right,var(--secondary) 0 1.5px,transparent 1.5px 12px) 0 100%/100% 7px no-repeat,repeating-linear-gradient(to right,var(--secondary) 0 1.5px,transparent 1.5px 60px) 0 100%/100% 12px no-repeat;animation:tape 6s linear infinite}
+.card h2{font-size:1.9rem}
+.card .sub{color:var(--muted);font-size:.93rem;margin-bottom:28px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:500;letter-spacing:.04em}
+input,select,textarea{width:100%;padding:12px 14px;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;transition:border-color .3s,box-shadow .3s}
+textarea{resize:vertical;min-height:96px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--secondary);box-shadow:0 0 0 3px rgba(197,166,106,.25)}
+.invalid{border-color:#b3412f}
+.slots{display:flex;flex-wrap:wrap;gap:10px}
+.slot{position:relative}
+.slot input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.slot span{display:block;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;font-size:.85rem;transition:all .3s var(--ease)}
+.slot input:checked+span{background:var(--primary);color:var(--on-primary);border-color:var(--secondary)}
+.slot input:focus-visible+span{outline:2px solid var(--secondary);outline-offset:3px}
+
+/* Button + Animation 3: gold shine sweep */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:26px;padding:14px 28px;border-radius:999px;border:2px solid var(--secondary);background:var(--primary);color:var(--on-primary);font-weight:500;letter-spacing:.02em;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn:hover{background:var(--secondary);color:var(--on-secondary);transform:translateY(-3px);box-shadow:0 14px 26px -12px rgba(0,0,0,.45)}
+.btn::after{content:'';position:absolute;top:-10%;bottom:-10%;left:0;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-160%) skewX(-18deg);animation:shine 4.5s ease-in-out 1.5s infinite}
+.note{font-size:.8rem;color:var(--muted);text-align:center;margin:14px 0 0}
+.success{display:none;text-align:center;padding:30px 0}
+.success.show{display:block}
+.success .tick{width:72px;height:72px;margin:0 auto 18px;display:grid;place-items:center;border-radius:50%;background:var(--primary);color:var(--secondary);border:2px solid var(--secondary)}
+form.hide{display:none}
+
+@keyframes archIn{from{clip-path:inset(100% -40px -40px -40px)}to{clip-path:inset(-40px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes tape{to{background-position:-60px 100%}}
+@keyframes shine{0%,35%{transform:translateX(-160%) skewX(-18deg)}70%,100%{transform:translateX(480%) skewX(-18deg)}}
+
+[dir="rtl"] .tape::before{animation-direction:reverse}
+
+.site-footer{background:#fff;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+[data-theme="dark"] .site-footer{background:#12241e}
+.site-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px 0}
+.site-footer p{margin:0}
+
+@media(max-width:960px){.grid{grid-template-columns:1fr;gap:56px}.intro{max-width:none}.visual{width:min(100%,300px)}}
+@media(max-width:620px){.page{padding:48px 0 72px}.card{padding:50px 22px 28px}.fields{grid-template-columns:1fr}.brand-tag{font-size:.58rem;letter-spacing:.08em}.logo-img{width:40px;height:40px}.brand-name{font-size:1.3rem}.icon-btn{width:36px;height:36px}.site-footer .container{justify-content:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="AUREL home">
+      <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+      <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+      <span class="brand-text"><span class="brand-name">AUREL</span><span class="brand-tag">Timeless &amp; classic</span></span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container grid">
+
+    <section>
+      <span class="eyebrow">Measurement Appointment</span>
+      <h1 class="title">Reserve your measurement at the studio</h1>
+      <p class="intro">Choose a day and time. We will talk through your design, fabric and delivery date, and take every measurement by hand.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>About 30 minutes per appointment</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open Mon - Sat, 10:00 AM - 7:00 PM</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free adjustment after your first wear</li>
+      </ul>
+      <div class="visual">
+        <div class="ring" aria-hidden="true"></div>
+        <figure class="frame">
+          <div class="media"><img src="https://img.freepik.com/premium-photo/seamstress-sewing-by-hands-workshop_156881-48.jpg?w=2000" alt="Tailor measuring and sewing by hand in the studio" width="900" height="1100"></div>
+        </figure>
+        <div class="badge" aria-hidden="true"><span>Since</span><strong>2011</strong></div>
+      </div>
+    </section>
+
+    <section class="card" id="appointment" aria-labelledby="formTitle">
+      <div class="tape" aria-hidden="true"></div>
+
+      <form id="bookForm" novalidate>
+        <h2 id="formTitle">Book measurement</h2>
+        <p class="sub">Fill in your details and we will confirm by phone.</p>
+        <div class="fields">
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="service">Garment</label>
+            <select id="service" name="service" required>
+              <option value="">Select a garment</option>
+              <option>Blouse</option><option>Suit</option><option>Kids wear</option><option>Custom design</option><option>Alteration</option>
+            </select></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
+          <div class="field full">
+            <label id="slotLabel">Preferred time</label>
+            <div class="slots" role="radiogroup" aria-labelledby="slotLabel">
+              <label class="slot"><input type="radio" name="slot" value="10:00 AM" checked><span>10:00 AM</span></label>
+              <label class="slot"><input type="radio" name="slot" value="12:00 PM"><span>12:00 PM</span></label>
+              <label class="slot"><input type="radio" name="slot" value="2:00 PM"><span>2:00 PM</span></label>
+              <label class="slot"><input type="radio" name="slot" value="4:00 PM"><span>4:00 PM</span></label>
+              <label class="slot"><input type="radio" name="slot" value="6:00 PM"><span>6:00 PM</span></label>
+            </div>
+          </div>
+          <div class="field full"><label for="notes">Design notes (optional)</label><textarea id="notes" name="notes" placeholder="Fabric, occasion or delivery date"></textarea></div>
+        </div>
+        <button class="btn" type="submit">Book Measurement</button>
+        <p class="note">No payment needed to reserve a slot.</p>
+      </form>
+
+      <div class="success" id="success" role="status" aria-live="polite" tabindex="-1">
+        <div class="tick"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>Request received</h2>
+        <p id="summary" style="color:var(--muted)"></p>
+        <a href="index.html" class="btn" style="width:auto;display:inline-flex">Back to Home</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
+    <p>Anekal, Karnataka</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var root=document.documentElement,$=function(s){return document.querySelector(s)};
+
+  $('#themeToggle').addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',n);
+    try{localStorage.setItem('aurel-theme',n)}catch(e){}
+  });
+  $('#rtlToggle').addEventListener('click',function(){
+    var n=root.getAttribute('dir')==='rtl'?'ltr':'rtl';
+    root.setAttribute('dir',n);
+    try{localStorage.setItem('aurel-dir',n)}catch(e){}
+  });
+
+  var date=$('#date'),today=new Date();
+  date.min=today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
+  $('#year').textContent=today.getFullYear();
+
+  var form=$('#bookForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true,first=null;
+    ['name','phone','service','date'].forEach(function(id){
+      var el=document.getElementById(id),v=el.value.trim();
+      var bad=!v||(id==='phone'&&v.replace(/\D/g,'').length<10);
+      el.classList.toggle('invalid',bad);
+      el.setAttribute('aria-invalid',bad);
+      if(bad){ok=false;if(!first)first=el}
+    });
+    if(!ok){first.focus();return}
+    var slot=form.querySelector('input[name="slot"]:checked').value;
+    $('#summary').textContent='Thank you, '+$('#name').value.trim()+'. We will call to confirm your '+$('#service').value.toLowerCase()+' measurement on '+date.value+' at '+slot+'.';
+    /* Connect your backend or WhatsApp / email service here */
+    form.classList.add('hide');
+    var s=$('#success');s.classList.add('show');s.focus();
+  });
+})();
+</script>
+</body>
+</html>

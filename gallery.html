@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabric Gallery | AUREL Tailoring &amp; Dress Stitching Studio</title>
+  <meta name="description" content="Browse AUREL's fabric gallery: silks, cottons, linens, wools, velvets and brocades for blouses, suits, kids wear and occasion pieces.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply saved theme / direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aurel-theme');
+        var d = localStorage.getItem('aurel-dir');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <!-- Shared icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="AUREL home">
+        <!-- Logo 1: shown in LIGHT mode | Logo 2: shown in DARK mode -->
+        <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+        <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+        <span class="brand-text">
+          <span class="brand-name">AUREL</span>
+          <span class="brand-tag">Timeless &amp; classic</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home
+              <svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="index.html">Home 1 <small>Classic Studio</small></a></li>
+              <li><a href="home2.html">Home 2 <small>Bridal &amp; Occasion</small></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li><a class="nav-link" href="services.html">SERVICES</a></li>
+          <li><a class="nav-link is-active" href="gallery.html" aria-current="page">GALLERY</a></li>
+          <li><a class="nav-link" href="blog.html">BLOG</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <!-- The ONLY call-to-action in the header -->
+        <a href="/bookmeasurement.html" class="btn btn-primary header-cta">Book Measurement</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. GALLERY HERO (full viewport) ============ -->
+    <section class="gh" id="gallery-hero">
+      <img class="gh-bg" src="https://static.wixstatic.com/media/5a84c0_44380362b475480fbe4756b62bd63487~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/5a84c0_44380362b475480fbe4756b62bd63487~mv2.png" alt="" aria-hidden="true">
+      <div class="gh-overlay" aria-hidden="true"></div>
+      <svg class="gh-stitch" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C240 10 480 110 720 60 S1200 10 1440 60"/></svg>
+
+      <div class="container gh-grid">
+        <div class="gh-copy">
+          <span class="eyebrow anim-rise" style="--d:.15s">Fabric Gallery</span>
+          <h1>
+            <span class="w" style="--w:0">Every</span> <span class="w" style="--w:1">cloth</span> <span class="w" style="--w:2">carries</span> <span class="w" style="--w:3">a</span> <span class="w" style="--w:4"><em>classic</em></span> <span class="w" style="--w:5">story.</span>
+          </h1>
+          <p class="gh-lead anim-rise" style="--d:.7s">Browse silks, cottons, linens, wools, velvets and brocades chosen for drape, durability and finish. Compare the cloths and pick the one your garment will be made from.</p>
+          <div class="btn-row anim-rise" style="--d:.85s">
+            <a href="#library" class="btn btn-primary">Browse the Library</a>
+            <a href="contact.html#appointment" class="btn btn-secondary">Book a Fitting</a>
+          </div>
+          <ul class="gh-facts anim-rise" style="--d:1s">
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>120+ fabric varieties</li>
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Swatches on request</li>
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Checked in store</li>
+          </ul>
+        </div>
+
+        <div class="gh-visual" aria-hidden="true">
+          <div class="gh-ring">
+            <div class="swatch" style="--a:0deg;   --c:#1f7a60; --c2:#0C211B;"><span class="sw-cap"><b>01</b>Emerald Silk</span></div>
+            <div class="swatch" style="--a:60deg;  --c:#f5f2eb; --c2:#d8cdb5;"><span class="sw-cap"><b>02</b>Ivory Cotton</span></div>
+            <div class="swatch" style="--a:120deg; --c:#C5A66A; --c2:#7d6236;"><span class="sw-cap"><b>03</b>Gold Brocade</span></div>
+            <div class="swatch" style="--a:180deg; --c:#2a3a44; --c2:#0b1419;"><span class="sw-cap"><b>04</b>Midnight Wool</span></div>
+            <div class="swatch" style="--a:240deg; --c:#7a2535; --c2:#3c0f19;"><span class="sw-cap"><b>05</b>Burgundy Velvet</span></div>
+            <div class="swatch" style="--a:300deg; --c:#9aa98f; --c2:#56634d;"><span class="sw-cap"><b>06</b>Sage Linen</span></div>
+          </div>
+          <div class="gh-floor"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. SIGNATURE CLOTHS ============ -->
+    <section class="section" id="signature">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Signature Cloths</span>
+          <h2 class="section-title">Three fabrics we return to, season after season</h2>
+          <p>Each one is stocked in depth, tested for drape and checked in our studio before it reaches your garment.</p>
+        </div>
+
+        <div class="sig-grid">
+          <article class="sig tilt reveal reveal-zoom" data-tilt-max="5" style="--i:0" tabindex="0">
+            <img src="https://i.pinimg.com/736x/c7/2f/7c/c72f7ce454c1832c159e620b3b03c995.jpg" alt="Pure silk draped in soft folds" loading="lazy">
+            <div class="sig-body">
+              <span class="sig-no">01</span>
+              <h3>Pure Silk</h3>
+              <p class="sig-text">Light, fluid and naturally lustrous. Ideal for blouses, linings and occasion wear.</p>
+              <ul class="sig-specs">
+                <li><span>Weight</span>Light to medium</li>
+                <li><span>Care</span>Gentle wash or dry clean</li>
+                <li><span>Best for</span>Blouses and occasion wear</li>
+              </ul>
+              <a class="text-link" href="#library">View in the library <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="sig tilt reveal reveal-zoom" data-tilt-max="5" style="--i:1" tabindex="0">
+            <img src="https://i.etsystatic.com/9360369/r/il/ff547e/4022077316/il_570xN.4022077316_reef.jpg" alt="Gold brocade with woven motifs" loading="lazy">
+            <div class="sig-body">
+              <span class="sig-no">02</span>
+              <h3>Brocade</h3>
+              <p class="sig-text">Woven with metallic threads in classic motifs. Made for bridal and festive pieces.</p>
+              <ul class="sig-specs">
+                <li><span>Weight</span>Medium to heavy</li>
+                <li><span>Care</span>Dry clean only</li>
+                <li><span>Best for</span>Bridal blouses and jackets</li>
+              </ul>
+              <a class="text-link" href="#library">View in the library <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <article class="sig tilt reveal reveal-zoom" data-tilt-max="5" style="--i:2" tabindex="0">
+            <img src="https://i.pinimg.com/736x/0e/cb/e2/0ecbe21126ef270085a4c814924967d8.jpg" alt="Wool suiting fabric in a tailored fold" loading="lazy">
+            <div class="sig-body">
+              <span class="sig-no">03</span>
+              <h3>Wool Suiting</h3>
+              <p class="sig-text">Crisp, warm and resilient. It holds a clean line through a full day of wear.</p>
+              <ul class="sig-specs">
+                <li><span>Weight</span>Medium</li>
+                <li><span>Care</span>Steam or dry clean</li>
+                <li><span>Best for</span>Suits, trousers and waistcoats</li>
+              </ul>
+              <a class="text-link" href="#library">View in the library <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. THE LIBRARY (filter + grid + lightbox) ============ -->
+    <section class="section section-alt" id="library">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The Library</span>
+          <h2 class="section-title">Browse the full collection</h2>
+          <p>Select a filter, then open any cloth to see it larger. Ask the studio for a swatch to take home.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter fabrics">
+          <button class="chip-btn is-on" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip-btn" type="button" data-filter="silk" aria-pressed="false">Silk</button>
+          <button class="chip-btn" type="button" data-filter="cotton" aria-pressed="false">Cotton</button>
+          <button class="chip-btn" type="button" data-filter="linen" aria-pressed="false">Linen</button>
+          <button class="chip-btn" type="button" data-filter="wool" aria-pressed="false">Wool</button>
+          <button class="chip-btn" type="button" data-filter="velvet" aria-pressed="false">Velvet &amp; Brocade</button>
+        </div>
+        <p class="lib-count reveal">Showing <span id="libCount">12</span> cloths</p>
+
+        <div class="lib-grid">
+          <button class="lib-item" type="button" data-cat="silk" data-src="https://i.pinimg.com/originals/6a/cb/bd/6acbbdc9c62595c8373aaa856a1f2f94.jpg" data-title="Champagne Satin" data-meta="Silk · Light weight · Blouses" style="--i:0">
+            <img src="https://i.pinimg.com/originals/6a/cb/bd/6acbbdc9c62595c8373aaa856a1f2f94.jpg" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Champagne Satin</strong><span>Silk</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="cotton" data-src="https://tse2.mm.bing.net/th/id/OIP.fSaR260WL8hNlw7y6IlzXQHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" data-title="Ivory Cotton Voile" data-meta="Cotton · Breathable · Everyday" style="--i:1">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.fSaR260WL8hNlw7y6IlzXQHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Ivory Cotton Voile</strong><span>Cotton</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="linen" data-src="https://www.studiosuits.com/cdn/shop/files/sagegreenpurelinensuitlk_1445x.jpg?v=1709016793" data-title="Sage Linen" data-meta="Linen · Crisp · Summer wear" style="--i:2">
+            <img src="https://www.studiosuits.com/cdn/shop/files/sagegreenpurelinensuitlk_1445x.jpg?v=1709016793" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Sage Linen</strong><span>Linen</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="wool" data-src="https://tse4.mm.bing.net/th/id/OIP.8yNIIpmYGEYKB4fyOPpFEQHaHa?r=0&w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3" data-title="Navy Wool Crepe" data-meta="Wool · Structured · Suits" style="--i:3">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.8yNIIpmYGEYKB4fyOPpFEQHaHa?r=0&w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Navy Wool Crepe</strong><span>Wool</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="velvet" data-src="https://labavettainc.com/cdn/shop/files/FullSizeRender_0cfec4e3-f5a3-49ed-8e89-32ff0bb9c46b.png?v=1772688874" data-title="Burgundy Velvet" data-meta="Velvet · Rich pile · Occasion" style="--i:4">
+            <img src="https://labavettainc.com/cdn/shop/files/FullSizeRender_0cfec4e3-f5a3-49ed-8e89-32ff0bb9c46b.png?v=1772688874" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Burgundy Velvet</strong><span>Velvet</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="velvet" data-src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/b/a/bandhej-printed-art-silk-gown-in-red-v1-tav70.jpg" data-title="Gold Zari Brocade" data-meta="Brocade · Metallic thread · Bridal" style="--i:5">
+            <img src="https://medias.utsavfashion.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/b/a/bandhej-printed-art-silk-gown-in-red-v1-tav70.jpg" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Gold Zari Brocade</strong><span>Brocade</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="silk" data-src="https://tse4.mm.bing.net/th/id/OIP.w10m2RsrW1UwkFg-rDrxTwHaKu?r=0&w=1000&h=1449&rs=1&pid=ImgDetMain&o=7&rm=3" data-title="Emerald Dupion Silk" data-meta="Silk · Textured · Festive" style="--i:6">
+            <img src="https://www.asthanarang.com/cdn/shop/files/10-03-21AsthaNarang4045_1800x1800.jpg?v=1749904431" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Emerald Dupion</strong><span>Silk</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="cotton" data-src="https://static3.azafashions.com/uploads/product_gallery/1666982-0868572001663000177.jpg" data-title="Cream Chanderi" data-meta="Cotton blend · Sheer · Festive" style="--i:7">
+            <img src="https://static3.azafashions.com/uploads/product_gallery/1666982-0868572001663000177.jpg" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Cream Chanderi</strong><span>Cotton</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="linen" data-src="https://itch-to-stitch.com/wp-content/uploads/2021/04/177967974_10158103473360841_999574538601329899_n-511x767.jpeg" data-title="Dove Grey Linen" data-meta="Linen · Matte · Trousers" style="--i:8">
+            <img src="https://itch-to-stitch.com/wp-content/uploads/2021/04/177967974_10158103473360841_999574538601329899_n-511x767.jpeg" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Dove Grey Linen</strong><span>Linen</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="wool" data-src="https://images.squarespace-cdn.com/content/v1/59df58c946c3c4aa7173a4cc/1684320320582-RZHVH5FAZYJDOO4WPLOY/Bespoke+Suit+Charcoal+5.jpg" data-title="Charcoal Suiting" data-meta="Wool · Tailored · Blazers" style="--i:9">
+            <img src="https://images.squarespace-cdn.com/content/v1/59df58c946c3c4aa7173a4cc/1684320320582-RZHVH5FAZYJDOO4WPLOY/Bespoke+Suit+Charcoal+5.jpg" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Charcoal Suiting</strong><span>Wool</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="velvet" data-src="https://www.midnightvelvet.com/on/demandware.static/-/Sites/default/dw1573fb1c/images/slot/midnightvelvet/homepage/2025/20250430/MV-MainMobile.png" data-title="Midnight Velvet" data-meta="Velvet · Deep pile · Evening" style="--i:10">
+            <img src="https://www.midnightvelvet.com/on/demandware.static/-/Sites/default/dw1573fb1c/images/slot/midnightvelvet/homepage/2025/20250430/MV-MainMobile.png" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Midnight Velvet</strong><span>Velvet</span></span>
+          </button>
+
+          <button class="lib-item" type="button" data-cat="cotton" data-src="https://vastarathelabel.com/cdn/shop/files/hf_20260710_050616_96d1d519-00a8-44a6-b09a-b45a302399c9.png?v=1783674133&width=1792" data-title="Mustard Handloom Cotton" data-meta="Cotton · Hand-loomed · Kids wear" style="--i:11">
+            <img src="https://vastarathelabel.com/cdn/shop/files/hf_20260710_050616_96d1d519-00a8-44a6-b09a-b45a302399c9.png?v=1783674133&width=1792" alt="" loading="lazy">
+            <span class="lib-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="lib-cap"><strong>Mustard Handloom</strong><span>Cotton</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. FABRIC GUIDE ============ -->
+    <section class="section" id="guide">
+      <div class="container guide-grid">
+        <div class="guide-visual reveal reveal-left">
+          <div class="arch">
+            <img src="https://us.mollybracken.com/cdn/shop/files/166125.jpg?v=1771894941&width=800" alt="Close view of a woven cloth" loading="lazy">
+          </div>
+          <span class="float-tag">Swatches on request</span>
+        </div>
+
+        <div class="guide-copy reveal reveal-right">
+          <span class="eyebrow">Fabric Guide</span>
+          <h2 class="section-title">Choose cloth by occasion, season and wear</h2>
+          <p>Fabric decides how a garment moves, breathes and ages. Start with how you will wear it, then choose the weave that suits that life.</p>
+
+          <div class="pick-grid">
+            <article class="pick tilt reveal reveal-zoom" style="--i:0">
+              <div class="pick-ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+              <h3>Everyday Wear</h3>
+              <p>Cotton and fine linen breathe well in warm weather and wash easily for daily blouses and shirts.</p>
+            </article>
+            <article class="pick tilt reveal reveal-zoom" style="--i:1">
+              <div class="pick-ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>Occasions</h3>
+              <p>Silk, brocade and velvet give drape and sheen for weddings, festivals and evening functions.</p>
+            </article>
+            <article class="pick tilt reveal reveal-zoom" style="--i:2">
+              <div class="pick-ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 8h16v11H4z M9 8V6h6v2 M4 13h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>Office &amp; Suits</h3>
+              <p>Wool suiting and crepe hold a crisp line through long days, with canvas support for structure.</p>
+            </article>
+            <article class="pick tilt reveal reveal-zoom" style="--i:3">
+              <div class="pick-ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>Children</h3>
+              <p>Soft cottons and skin-friendly weaves, breathable linings for comfortable all-day wear.</p>
+            </article>
+          </div>
+
+          <div class="btn-row">
+            <a href="contact.html" class="btn btn-primary">Request Swatches</a>
+            <a href="services.html" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. IMAGE STORY SECTION ============ -->
+    <section class="section" id="image-story">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Studio Story</span>
+          <h2 class="section-title">The touch, texture and movement behind every piece</h2>
+          <p>Cloth is more than a material — it shapes the silhouette, the comfort and the mood of the final garment.</p>
+        </div>
+
+        <div class="story-grid" style="display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:stretch;">
+          <div class="reveal reveal-left" style="overflow:hidden; border-radius:28px; box-shadow:0 26px 55px rgba(11,20,25,.14);">
+            <img src="https://img.freepik.com/premium-photo/asian-female-fashion-designer-tailor-with-assistance-preparing-cut-paper-fabric-pattern-dressmaker-working-designing-new-fashion-collections-customers-atelier-tailor-workshop_43263-4722.jpg" alt="Tailor handling fabric and garment pieces in studio" loading="lazy" style="display:block; width:100%; height:100%; min-height:420px; object-fit:cover;">
+          </div>
+
+          <div class="reveal reveal-right" style="display:grid; gap:24px;">
+            <div style="overflow:hidden; border-radius:28px; box-shadow:0 22px 48px rgba(11,20,25,.12);">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.0G0DsQLX7sAdW14U08g3zAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Close-up of tailored fabric and stitching detail" loading="lazy" style="display:block; width:100%; height:220px; object-fit:cover;">
+            </div>
+            <div style="padding:26px 24px; border-radius:28px; background:linear-gradient(135deg, rgba(25,53,46,.97), rgba(76,116,101,.88)); color:#fff; box-shadow:0 24px 50px rgba(25,53,46,.16);">
+              <span class="eyebrow" style="color:rgba(255,255,255,.72);">Fabric First</span>
+              <h3 style="margin:10px 0 12px; font-size:clamp(1.6rem,2vw,2.1rem); line-height:1.2;">We choose cloth that feels beautiful in hand and graceful on the body.</h3>
+              <p style="margin:0; color:rgba(255,255,255,.84);">The right weave brings comfort, body movement and finish — and that balance is what makes a garment feel naturally elegant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. CTA: SWATCH PACK (directly above footer, no image) ============ -->
+    <section class="section swatch-cta" id="appointment-cta" aria-labelledby="swatchTitle">
+      <div class="container">
+        <div class="sw-panel reveal reveal-zoom">
+
+          <div class="sw-copy reveal reveal-left">
+            <span class="eyebrow">Swatch Pack</span>
+            <h2 class="section-title" id="swatchTitle">Feel the cloth before you cut it.</h2>
+            <svg class="sw-under" viewBox="0 0 200 14" aria-hidden="true"><path d="M2 7 C30 0 60 14 90 7 S150 0 198 7"/></svg>
+            <p>Not sure which weave will move well in your garment? Request a swatch pack of the cloths you are considering. Hold them against your skin, see them in daylight and bring your favourite to the measurement session.</p>
+            <ul class="sw-checks">
+              <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Swatch packs arranged by weight and finish</li>
+              <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Compare silk, cotton, linen and wool side by side</li>
+              <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Choose your cloth at the measurement session</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book a Fabric Visit</a>
+              <a href="tel:+910000000000" class="btn btn-secondary">Call the Studio</a>
+            </div>
+          </div>
+
+          <div class="sw-visual reveal reveal-right" aria-hidden="true">
+            <span class="sw-ring"></span>
+            <div class="sw-fan">
+              <span class="sw-card" style="--r:-16deg; --k:0; --c:#2b6f5a; --c2:#0C211B;"></span>
+              <span class="sw-card" style="--r:-6deg;  --k:1; --c:#e9dcc0; --c2:#b89f6c;"></span>
+              <span class="sw-card" style="--r:6deg;   --k:2; --c:#8c3346; --c2:#3c0f19;"></span>
+              <span class="sw-card" style="--r:16deg;  --k:3; --c:#3d4f5c; --c2:#0b1419;"></span>
+            </div>
+            <p class="sw-label">Sample pack, assembled by the studio</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lbTitle">
+    <img class="lb-img" id="lbImg" alt="">
+    <div class="lb-foot">
+      <div>
+        <strong id="lbTitle"></strong>
+        <span id="lbMeta"></span>
+      </div>
+      <div class="lb-actions">
+        <a class="text-link" href="contact.html">Enquire</a>
+        <button class="lb-close" id="lbClose" type="button" aria-label="Close preview">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="AUREL home">
+          <!-- Logo 1: shown in LIGHT mode | Logo 2: shown in DARK mode -->
+          <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+          <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+          <span class="brand-text">
+            <span class="brand-name">AUREL</span>
+            <span class="brand-tag">Timeless &amp; classic</span>
+          </span>
+        </a>
+        <p>A tailoring and dress stitching studio for blouses, suits, kids wear and careful alterations.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8.5V7c0-.8.4-1.2 1.3-1.2H17V3h-2.4C12 3 10.6 4.5 10.6 6.8v1.7H8.5V12h2.1v9H14v-9h2.6l.4-3.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.8 0-2.6l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.7 0 3-1.8 3-4.4 0-2.3-1.6-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.2.1.1.1.2.1.3l-.3 1.1c0 .2-.1.2-.3.1-1.2-.6-2-2.3-2-3.8 0-3.1 2.3-6 6.5-6 3.4 0 6 2.4 6 5.7 0 3.4-2.1 6.1-5.1 6.1-1 0-1.9-.5-2.2-1.1l-.6 2.3c-.2.8-.8 1.8-1.2 2.4A9 9 0 1 0 12 3z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Fabric Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#blouses">Blouses</a></li>
+          <li><a href="services.html#suits">Suits</a></li>
+          <li><a href="services.html#kids">Kids Wear</a></li>
+           <li><a href="services.html#designing">Designing</a></li>
+          <li><a href="services.html#alterations">Alterations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit the Studio</h4>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Your street address, Anekal, Karnataka</span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="mailto:hello@aurel.example">hello@aurel.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Mon - Sat: 10:00 AM - 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
+        <ul class="legal">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="gallery.js">
+
+  </script>
+</body>
+</html>

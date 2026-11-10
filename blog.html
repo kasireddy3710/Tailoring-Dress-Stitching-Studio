@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | AUREL Tailoring &amp; Dress Stitching Studio</title>
+  <meta name="description" content="AUREL Journal: fitting notes, fabric guides, care tips and studio stories from our tailors. Timeless &amp; classic.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply saved theme / direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aurel-theme');
+        var d = localStorage.getItem('aurel-dir');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="AUREL home">
+        <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+        <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+        <span class="brand-text">
+          <span class="brand-name">AUREL</span>
+          <span class="brand-tag">Timeless &amp; classic</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home
+              <svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="index.html">Home 1 <small>Classic Studio</small></a></li>
+              <li><a href="index-2.html">Home 2 <small>Bridal &amp; Occasion</small></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li><a class="nav-link" href="services.html">SERVICES</a></li>
+          <li><a class="nav-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="nav-link is-active" href="blog.html" aria-current="page">BLOG</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <!-- The ONLY call-to-action in the header -->
+        <a href="/bookmeasurement.html" class="btn btn-primary header-cta">Book Measurement</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO (full viewport) ============ -->
+    <section class="bh" id="blog-hero">
+      <img class="bh-bg" src="https://media.istockphoto.com/id/501423134/photo/stack-of-white-and-soft-hotel-towels-and-bathrobe.jpg?s=612x612&w=0&k=20&c=wIxK2SaE7154VD5xGhzJ1keypOSXSMJoN_DoKHE8IRg=" alt="" loading="eager">
+      <div class="bh-overlay" aria-hidden="true"></div>
+      <svg class="bh-stitch" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C240 10 480 110 720 60 S1200 10 1440 60"/></svg>
+
+      <div class="container bh-grid">
+        <div class="bh-copy">
+          <span class="eyebrow anim-rise" style="--d:.05s">AUREL Journal</span>
+          <h1 class="bh-title">
+            <span class="w" style="--w:0">Notes</span>
+            <span class="w" style="--w:1">from</span>
+            <span class="w" style="--w:2">the</span>
+            <span class="w" style="--w:3"><em>cutting</em></span>
+            <span class="w" style="--w:4"><em>table.</em></span>
+          </h1>
+          <p class="bh-lead anim-rise" style="--d:.5s">Fitting advice, fabric notes and care guidance from the tailors at AUREL. Read the thinking behind every seam, then bring what you learn to your next appointment.</p>
+          <div class="btn-row anim-rise" style="--d:.65s">
+            <a href="#articles" class="btn btn-primary">Read Latest</a>
+            <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+          </div>
+          <ul class="bh-facts anim-rise" style="--d:.8s">
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Written by our tailors</li>
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Fitting and fabric notes</li>
+            <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Updated monthly</li>
+          </ul>
+        </div>
+
+        <div class="bh-visual">
+          <div class="bh-ring" aria-hidden="true"></div>
+          <div class="bh-book" aria-hidden="true">
+            <div class="bh-page bh-left">
+              <span class="bh-kicker">Fitting Notes</span>
+              <h3>Measure twice, stitch once.</h3>
+              <span class="bh-lines"><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="bh-page bh-right">
+              <span class="bh-lines"><i></i><i></i><i></i><i></i><i></i></span>
+              <p class="bh-note">Bring the shoes you will wear to the trial.</p>
+            </div>
+            <div class="bh-leaf">
+              <div class="bh-face bh-front">
+                <span class="bh-kicker">Fabric Guide</span>
+                <span class="bh-lines"><i></i><i></i><i></i><i></i></span>
+              </div>
+              <div class="bh-face bh-back">
+                <span class="bh-kicker">Care</span>
+                <span class="bh-lines"><i></i><i></i><i></i><i></i></span>
+              </div>
+            </div>
+            <span class="bh-spine"></span>
+          </div>
+          <span class="bh-chip">Fresh each month</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. FEATURED ARTICLE ============ -->
+    <section class="section" id="featured">
+      <div class="container feature">
+        <div class="feature-media reveal reveal-left">
+          <img class="feature-img tilt" data-tilt-max="6" src="https://images.pexels.com/photos/6461201/pexels-photo-6461201.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-6461201.jpg&fm=jpg" alt="Tailor pinning a fitting toile on a mannequin" loading="lazy">
+          <div class="feature-badge" aria-hidden="true"><span>Featured</span><strong>Fit Notes</strong></div>
+        </div>
+
+        <div class="feature-copy reveal reveal-right">
+          <div class="meta">
+            <span class="tag">Fitting Notes</span>
+            <time datetime="2026-03-01">March 2026</time>
+            <span>7 min read</span>
+          </div>
+          <h2 class="section-title">Why the first fitting decides the final fit</h2>
+          <p>A first trial is where a garment stops being a pattern and starts being yours. It is the moment we check the shoulder line, the balance at the back and the way the fabric moves when you sit, reach and turn.</p>
+          <p>Here is what our tailors look for at that stage, and how you can help us get it right before the final press. Small changes made early save a full re-stitch later.</p>
+          <div class="byline">
+            <span class="monogram" aria-hidden="true">MI</span>
+            <div>
+              <strong>Meera Iyer</strong>
+              <span>Founder &amp; Head Tailor</span>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" data-article="tpl-featured" data-kicker="Fitting Notes" data-title="Why the first fitting decides the final fit" data-meta="Meera Iyer · March 2026 · 7 min read">Read the Article</button>
+            <a href="#articles" class="text-link">More articles <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. LATEST ARTICLES ============ -->
+    <section class="section section-alt" id="articles">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Latest Articles</span>
+          <h2 class="section-title">Notes you can use before your next visit</h2>
+          <p>Short reads on fitting, fabric and care, written by our tailors.</p>
+        </div>
+        <div class="card-grid cols-4">
+          <article class="card post tilt reveal reveal-zoom" style="--i:0">
+            <div class="card-img"><img src="https://5.imimg.com/data5/SELLER/Default/2025/11/558659214/SQ/HW/OQ/249651428/whatsapp-image-2025-11-09-at-6-11-07-pm-7-1000x1000.jpeg" alt="Silk fabric ready for a wedding blouse" loading="lazy"></div>
+            <div class="card-body">
+              <div class="post-meta"><span>Fabric Guide</span><time datetime="2026-02-10">Feb 2026</time></div>
+              <h3>Choosing silk for a wedding blouse</h3>
+              <p>Weight, sheen and drape decide how a blouse sits through a long day. A quick guide to the silks we stock.</p>
+              <div class="post-foot">
+                <span>5 min read</span>
+                <button type="button" class="text-link read-btn" data-article="tpl-silk" data-kicker="Fabric Guide" data-title="Choosing silk for a wedding blouse" data-meta="Fabric Guide · Feb 2026 · 5 min read">Read <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card post tilt reveal reveal-zoom" style="--i:1">
+            <div class="card-img"><img src="https://d22kyi72gc3100.cloudfront.net/sites/files/fairebelle/blog%20post/batch%204%20-%20article%201/cheongsam-care-tips-featured.jpg" alt="Embroidered garment laid flat for care" loading="lazy"></div>
+            <div class="card-body">
+              <div class="post-meta"><span>Care &amp; Alterations</span><time datetime="2026-02-02">Feb 2026</time></div>
+              <h3>Caring for hand embroidery at home</h3>
+              <p>Zari and thread work last longer with gentle handling. Simple washing, drying and storage habits.</p>
+              <div class="post-foot">
+                <span>4 min read</span>
+                <button type="button" class="text-link read-btn" data-article="tpl-care" data-kicker="Care &amp; Alterations" data-title="Caring for hand embroidery at home" data-meta="Care &amp; Alterations · Feb 2026 · 4 min read">Read <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card post tilt reveal reveal-zoom" style="--i:2">
+            <div class="card-img"><img src="https://www.picclickimg.com/lVYAAOSw61dmOifb/Childrens-Clothes-Rail-Hanging-Wardrobe-Storage-Wooden-Kids.webp" alt="Children's clothes hanging on a rail" loading="lazy"></div>
+            <div class="card-body">
+              <div class="post-meta"><span>Kids Wear</span><time datetime="2026-01-18">Jan 2026</time></div>
+              <h3>Kids' clothes that grow with the child</h3>
+              <p>Growth allowances, soft linings and easy closures. How we make festive wear comfortable enough for everyday.</p>
+              <div class="post-foot">
+                <span>6 min read</span>
+                <button type="button" class="text-link read-btn" data-article="tpl-kids" data-kicker="Kids Wear" data-title="Kids' clothes that grow with the child" data-meta="Kids Wear · Jan 2026 · 6 min read">Read <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card post tilt reveal reveal-zoom" style="--i:3">
+            <div class="card-img"><img src="https://tse1.mm.bing.net/th/id/OIP.si9U3kLnjRA6wxfxQuGZ-wHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Suit canvas and tailoring tools on a table" loading="lazy"></div>
+            <div class="card-body">
+              <div class="post-meta"><span>Fitting Notes</span><time datetime="2025-12-05">Dec 2025</time></div>
+              <h3>Half or full canvas: which suit is right?</h3>
+              <p>Construction changes how a jacket moves, holds its shape and ages. We explain the difference.</p>
+              <div class="post-foot">
+                <span>7 min read</span>
+                <button type="button" class="text-link read-btn" data-article="tpl-canvas" data-kicker="Fitting Notes" data-title="Half or full canvas: which suit is right?" data-meta="Fitting Notes · Dec 2025 · 7 min read">Read <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. CATEGORIES ============ -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Browse by Topic</span>
+          <h2 class="section-title">Find the notes you need</h2>
+        </div>
+        <div class="cat-grid">
+          <a class="cat reveal reveal-zoom" href="#articles" style="--i:0">
+            <span class="cat-no" aria-hidden="true">01</span>
+            <span class="cat-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16L16 4l4 4L8 20z M8 12l2 2 M11 9l2 2 M14 6l2 2"/></svg>
+            </span>
+            <h3>Fitting Notes</h3>
+            <p>Measurements, trial fittings.</p>
+            <small>12 articles</small>
+            <span class="under" aria-hidden="true"></span>
+          </a>
+          <a class="cat reveal reveal-zoom" href="#articles" style="--i:1">
+            <span class="cat-no" aria-hidden="true">02</span>
+            <span class="cat-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M4 14h16M9 4v16"/></svg>
+            </span>
+            <h3>Fabric Guide</h3>
+            <p>Silks, cottons, linens and wools explained.</p>
+            <small>9 articles</small>
+            <span class="under" aria-hidden="true"></span>
+          </a>
+          <a class="cat reveal reveal-zoom" href="#articles" style="--i:2">
+            <span class="cat-no" aria-hidden="true">03</span>
+            <span class="cat-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/></svg>
+            </span>
+            <h3>Bridal Notes</h3>
+            <p>Planning blouses, sets and bridal fittings.</p>
+            <small>6 articles</small>
+            <span class="under" aria-hidden="true"></span>
+          </a>
+          <a class="cat reveal reveal-zoom" href="#articles" style="--i:3">
+            <span class="cat-no" aria-hidden="true">04</span>
+            <span class="cat-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg>
+            </span>
+            <h3>Care &amp; Alterations</h3>
+            <p>Washing, pressing, storing and letting out.</p>
+            <small>8 articles</small>
+            <span class="under" aria-hidden="true"></span>
+          </a>
+          <a class="cat reveal reveal-zoom" href="#articles" style="--i:4">
+            <span class="cat-no" aria-hidden="true">05</span>
+            <span class="cat-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5h.01M15 9.5h.01"/></svg>
+            </span>
+            <h3>Kids Wear</h3>
+            <p>Growth allowance, linings and designs.</p>
+            <small>5 articles</small>
+            <span class="under" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. STUDIO TIPS ============ -->
+    <section class="section section-alt" id="tips">
+      <div class="container tips-grid">
+        <div class="tips-media reveal reveal-left">
+          <img class="tips-img tilt" data-tilt-max="5" src="https://tse3.mm.bing.net/th/id/OIP.RM6ydiY5bKHqi0itzEq_igHaLG?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Scissors resting on folded fabric" loading="lazy">
+        </div>
+
+        <div class="tips-copy">
+          <span class="eyebrow reveal">Studio Notes</span>
+          <h2 class="section-title reveal">Four habits that make a better fit</h2>
+          <ol class="tips-list">
+            <li class="tip reveal reveal-right" style="--i:0">
+              <span class="tip-no" aria-hidden="true">01</span>
+              <div>
+                <h3>Measure in your undergarments</h3>
+                <p>A padded bra or a shaping layer changes the bust and waist readings. Wear what you plan to wear with the garment.</p>
+              </div>
+            </li>
+            <li class="tip reveal reveal-right" style="--i:1">
+              <span class="tip-no" aria-hidden="true">02</span>
+              <div>
+                <h3>Bring the shoes you will wear</h3>
+                <p>Hem length is set with your shoes on. A hem measured on flat floor can sit too long with heels.</p>
+              </div>
+            </li>
+            <li class="tip reveal reveal-right" style="--i:2">
+              <span class="tip-no" aria-hidden="true">03</span>
+              <div>
+                <h3>Choose the lining with the fabric</h3>
+                <p>A lining decides how a silk or brocade garment hangs and how long it lasts. Decide both together.</p>
+              </div>
+            </li>
+            <li class="tip reveal reveal-right" style="--i:3">
+              <span class="tip-no" aria-hidden="true">04</span>
+              <div>
+                <h3>Ask for a second trial</h3>
+                <p>A small change at trial saves a full re-stitch later. Book the extra fitting before the final press.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. GLOSSARY (2D + 3D, no images) ============ -->
+    <section class="section" id="glossary" aria-labelledby="glossTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Glossary</span>
+          <h2 class="section-title" id="glossTitle">Terms we use at the cutting table</h2>
+          <p>Short definitions for the words that come up in fittings, fabric choices and care. If a term is unfamiliar, ask us at your measurement session.</p>
+        </div>
+        <div class="gloss-rule" aria-hidden="true"></div>
+
+        <div class="gloss-grid">
+          <div class="reveal reveal-zoom" style="--i:0">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">01</span>
+              <h3>Ease</h3>
+              <p>The extra room built into a garment so it can move. Too little and it pulls at the seams; too much and it looks loose.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:1">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">02</span>
+              <h3>Canvas</h3>
+              <p>The stiff interlining that gives a jacket its chest and lapel shape. Half and full canvas differ in how much of it is hand-padded.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:2">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">03</span>
+              <h3>Dupion</h3>
+              <p>A slubbed silk with a crisp body and a textured face. It holds structure well, which suits princess cuts.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:3">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">04</span>
+              <h3>Zari</h3>
+              <p>Metallic thread used in festive embroidery. Keep it dry, away from perfume, and out of long exposure to sunlight.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:4">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">05</span>
+              <h3>Growth Allowance</h3>
+              <p>Extra length and width in seams and hems, so a child's garment can be let out or let down as they grow.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:5">
+            <article class="term tilt" data-tilt-max="5">
+              <span class="term-no" aria-hidden="true">06</span>
+              <h3>Trial Toile</h3>
+              <p>A first-fit garment, usually in a plain cloth, cut to test the balance before the real fabric is touched.</p>
+              <span class="term-line" aria-hidden="true"></span>
+            </article>
+          </div>
+        </div>
+
+        <div class="center-row reveal">
+          <a href="#articles" class="text-link">Back to the latest articles <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. CTA: MONTHLY NOTES (directly above footer, no image) ============ -->
+    <section class="section section-alt jn-cta" id="appointment-cta" aria-labelledby="jnTitle">
+      <div class="container">
+        <div class="jn-panel reveal reveal-zoom">
+
+          <div class="jn-copy reveal reveal-left">
+            <span class="eyebrow">Monthly Notes</span>
+            <h2 class="section-title" id="jnTitle">Get the next note from the cutting table.</h2>
+            <p>Once a month our tailors send one fitting note, one fabric guide or one care tip straight to your inbox. No promotions, no filler, just the notes we would share across the table.</p>
+
+            <form class="jn-form" id="jnForm" novalidate>
+              <label class="sr-only" for="jnEmail">Email address</label>
+              <input class="jn-input" id="jnEmail" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+            <p class="jn-status" id="jnStatus" role="status" aria-live="polite"></p>
+
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-secondary">Book a Fitting</a>
+            </div>
+          </div>
+
+          <div class="jn-visual" aria-hidden="true">
+            <span class="jn-ring"></span>
+            <div class="jn-stack">
+              <span class="jn-sheet" style="--k:2"></span>
+              <span class="jn-sheet" style="--k:1"></span>
+              <div class="jn-sheet jn-top">
+                <span class="jn-issue">Issue 03</span>
+                <strong>Fit before fabric</strong>
+                <span class="jn-lines"><i></i><i></i><i></i></span>
+              </div>
+            </div>
+            <span class="jn-tag">Sent once a month</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ARTICLE READER (dialog) ============ -->
+  <dialog class="ar" id="articleReader" aria-labelledby="arTitle">
+    <div class="ar-head">
+      <div>
+        <span class="ar-kicker" id="arKicker"></span>
+        <h3 id="arTitle"></h3>
+        <p class="ar-meta" id="arMeta"></p>
+      </div>
+      <button class="ar-close" type="button" data-ar-close aria-label="Close article">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="ar-progress" id="arProgress" aria-hidden="true"></div>
+    <div class="ar-body" id="arBody"></div>
+    <div class="ar-foot">
+      <a class="btn btn-primary" href="contact.html#appointment">Book a Fitting</a>
+      <button class="btn btn-secondary" type="button" data-ar-close>Close Article</button>
+    </div>
+  </dialog>
+
+  <!-- ============ ARTICLE TEXT (templates, cloned into the reader) ============ -->
+  <template id="tpl-featured">
+    <p class="ar-lead">A first trial is where a garment stops being a pattern and starts being yours. Before the final press, we want to see how the cloth sits on your body, not on a form.</p>
+    <p>At AUREL, the first trial is usually a half-made garment. The seams are tacked, the collar is basted and the sleeves are set loosely so we can see the line. Nothing is finished yet, and that is the point. A change at this stage takes minutes. The same change after the press can mean unpicking a day of work.</p>
+    <h4>What we check at the first trial</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>The shoulder line, which should sit on your natural point without pulling toward the neck.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>The balance at the back, so the garment hangs straight when you stand relaxed.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Sleeve length and armhole depth, checked with your arms at rest and lifted.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Bust and waist ease, so the fabric can move when you sit, reach and turn.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>The hem, checked in the shoes you plan to wear for the occasion.</li>
+    </ul>
+    <blockquote>A garment is only finished once it has moved with you.</blockquote>
+    <h4>How you can help</h4>
+    <p>Wear the undergarments you will wear on the day. Bring the shoes, and if the garment is for an event, bring the dupatta or jewellery you plan to pair with it. Tell us what feels tight or loose rather than what looks wrong. Phrases such as "pulls here" or "gaps there" help us find the cause faster.</p>
+    <h4>When a second trial is worth it</h4>
+    <p>Structured garments such as suits and fitted bridal blouses often need a second look. If the first trial shows a change to the shoulder, the bust or the armhole, we cut the adjustment and fit it again before the final stitching. It takes a little more time, and it saves the garment from being unpicked later.</p>
+  </template>
+
+  <template id="tpl-silk">
+    <p class="ar-lead">Weight, sheen and drape decide how a wedding blouse sits through a long day, from the first photograph to the last dance.</p>
+    <p>Silk is not one fabric. Two silks of the same colour can behave very differently once they are cut, lined and worn. Before we recommend a cloth, we ask how the blouse will be worn: whether it is fitted or loose, whether it will sit under a heavy zari saree or a lighter drape, and how many hours it needs to hold its shape.</p>
+    <h4>The silks we work with most</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Satin silk: smooth and lustrous, with a soft fall. It shows every seam, so the stitching must be precise.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Dupion: slubbed and textured, with a crisp body. It holds structure well and suits princess cuts.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Crepe de chine: fine, matte and fluid. A good choice for soft necklines and back-open designs.</li>
+    </ul>
+    <h4>Lining is part of the decision</h4>
+    <p>A silk blouse without a lining can cling, show the bra line and wear through at the underarm. We usually recommend a soft cotton or silk lining for the body, and a stiffer interfacing at the neckline and armhole. Decide the lining at the same time as the outer cloth, because the two change how the garment hangs.</p>
+    <h4>Care for the wedding season</h4>
+    <p>Silk should be spot-cleaned or dry-cleaned, pressed on the reverse with a cloth between the iron and the fabric, and stored flat or on a padded hanger. Keep perfume and hairspray away from the fabric on the day, and carry a small kit of spare pins and a lint roller.</p>
+  </template>
+
+  <template id="tpl-care">
+    <p class="ar-lead">Zari and thread work last longer with gentle handling. Most damage happens in the first wash, not the tenth.</p>
+    <p>Hand embroidery is built from many small stitches, and each one depends on the stitch beneath it. Water, friction and heat loosen that structure over time. Zari, the metallic thread used in many festive pieces, can also tarnish if it is exposed to moisture, perfume or direct sunlight for long periods.</p>
+    <h4>Washing at home</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Turn the garment inside out and place it in a mesh bag if you are using a machine.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Use cold water and a mild, pH-neutral detergent. Avoid bleach and softeners.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Do not wring. Press gently in a towel to remove water.</li>
+    </ul>
+    <blockquote>If you are unsure, dry clean. A good cleaner will know zari.</blockquote>
+    <h4>Drying and storage</h4>
+    <p>Dry flat in shade, away from direct sun and heaters. Once dry, store the garment in a breathable cotton bag rather than plastic, which traps moisture. Fold along the seams rather than across the embroidery, and put a sheet of acid-free tissue between the folds where the zari is densest.</p>
+    <h4>When to bring it to the studio</h4>
+    <p>Loose beads, lifted thread or a split seam should be repaired early. A small repair is quick and invisible. Left too long, the same damage can spread across the panel and take a full day to restore.</p>
+  </template>
+
+  <template id="tpl-kids">
+    <p class="ar-lead">Children grow fast, and the clothes they wear for festivals should be comfortable enough to wear again the following week.</p>
+    <p>Most of the decisions we make for children's wear are about allowance. A little extra room in the right places means a garment can be worn for longer, handed down, or let out once without looking altered. It also means the child can sit, run and reach without the fabric pulling.</p>
+    <h4>Built-in growth</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>A hem allowance of two to three centimetres, finished so it can be let down cleanly.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Seam allowances wide enough to take in or let out at the side seams.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Adjustable waists with a hidden elastic panel or a button tab, rather than a fixed tight band.</li>
+    </ul>
+    <h4>Comfort against the skin</h4>
+    <p>We line festive frocks with a soft cotton lining wherever the fabric would otherwise touch the skin. Embellishment is placed away from the back and under the arms, and any ties or buttons are secured so they do not catch on play.</p>
+    <h4>Easy to put on</h4>
+    <p>Wrap closures, back openings with generous tapes and simple zips make dressing faster and less stressful. For everyday school wear, we often choose a rear closure with a flap, so the front stays smooth and the child can dress without help.</p>
+  </template>
+
+  <template id="tpl-canvas">
+    <p class="ar-lead">Construction changes how a jacket moves, holds its shape and ages. Half canvas and full canvas are two very different answers to the same question.</p>
+    <p>A jacket's front is where most of the structure lives. Between the outer cloth and the lining, a layer of canvas or fused interfacing gives the chest its shape, supports the lapels and keeps the front from sagging after a day of wear. The choice between half and full canvas decides how much of that layer is hand-sewn and how much is fused.</p>
+    <h4>Half canvas</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Canvas is fitted to the chest and lapel area only, with the rest of the front fused.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Lighter, more flexible and generally more affordable.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Suits everyday office wear and lighter wool cloths.</li>
+    </ul>
+    <h4>Full canvas</h4>
+    <ul>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Canvas runs the full length of the front, hand-padded to the chest.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Moulds to the body over time, so the jacket fits better the more it is worn.</li>
+      <li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><use href="#ck"/></svg>Takes longer to make and suits structured jackets and heavier suiting.</li>
+    </ul>
+    <h4>Which one should you choose?</h4>
+    <p>If the suit is for daily wear and you want a lighter feel, half canvas is a sensible choice. If you want the jacket to look sharp for years, especially in a structured wool or a dinner jacket, full canvas repays the extra time. We will talk through the cloth, the wear and the budget at your measurement session.</p>
+  </template>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="AUREL home">
+          <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+          <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+          <span class="brand-text">
+            <span class="brand-name">AUREL</span>
+            <span class="brand-tag">Timeless &amp; classic</span>
+          </span>
+        </a>
+        <p>A tailoring and dress stitching studio for blouses, suits, kids wear and careful alterations.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8.5V7c0-.8.4-1.2 1.3-1.2H17V3h-2.4C12 3 10.6 4.5 10.6 6.8v1.7H8.5V12h2.1v9H14v-9h2.6l.4-3.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.8 0-2.6l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.7 0 3-1.8 3-4.4 0-2.3-1.6-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.2.1.1.1.2.1.3l-.3 1.1c0 .2-.1.2-.3.1-1.2-.6-2-2.3-2-3.8 0-3.1 2.3-6 6.5-6 3.4 0 6 2.4 6 5.7 0 3.4-2.1 6.1-5.1 6.1-1 0-1.9-.5-2.2-1.1l-.6 2.3c-.2.8-.8 1.8-1.2 2.4A9 9 0 1 0 12 3z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Fabric Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#blouses">Blouses</a></li>
+          <li><a href="services.html#suits">Suits</a></li>
+          <li><a href="services.html#kids">Kids Wear</a></li>
+           <li><a href="services.html#designing">Designing</a></li>
+          <li><a href="services.html#alterations">Alterations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit the Studio</h4>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Your street address, Anekal, Karnataka</span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="mailto:hello@aurel.example">hello@aurel.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Mon - Sat: 10:00 AM - 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
+        <ul class="legal">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blog.js">
+
+  </script>
+</body>
+</html>

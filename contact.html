@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | AUREL Tailoring &amp; Dress Stitching Studio</title>
+  <meta name="description" content="Book a measurement appointment, call, write or visit AUREL in Anekal, Karnataka.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply saved theme / direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aurel-theme');
+        var d = localStorage.getItem('aurel-dir');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="AUREL home">
+        <!-- Logo 1: light mode | Logo 2: dark mode -->
+        <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+        <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+        <span class="brand-text">
+          <span class="brand-name">AUREL</span>
+          <span class="brand-tag">Timeless &amp; classic</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home
+              <svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="index.html">Home 1 <small>Classic Studio</small></a></li>
+              <li><a href="home2.html">Home 2 <small>Bridal &amp; Occasion</small></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li><a class="nav-link" href="services.html">SERVICES</a></li>
+          <li><a class="nav-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="nav-link" href="blog.html">BLOG</a></li>
+          <li><a class="nav-link is-active" href="contact.html" aria-current="page">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <!-- The ONLY call-to-action in the header -->
+        <a href="/bookmeasurement.html" class="btn btn-primary header-cta">Book Measurement</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO (full viewport) ============ -->
+    <section class="hero" id="contact-hero">
+      <img class="hero-bg" src="https://img.freepik.com/premium-photo/tailoring-studio-with-sewing-machine-garments_839035-145854.jpg" alt="" fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <svg class="hero-stitch" viewBox="0 0 1200 110" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 55 C 150 10, 300 100, 450 55 S 750 10, 900 55 S 1150 100, 1200 55"/>
+      </svg>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow anim-rise" style="--d:.1s">Contact the Studio</span>
+          <h1 class="hero-title">
+            <span class="w" style="--w:0">Let&rsquo;s</span>
+            <span class="w" style="--w:1">plan</span>
+            <span class="w" style="--w:2">your</span>
+            <span class="w" style="--w:3"><em>next</em></span>
+            <span class="w" style="--w:4"><em>classic.</em></span>
+          </h1>
+          <p class="lead anim-rise" style="--d:.9s">Book a measurement session, ask about fabric or alterations, or simply visit the studio. Our tailors reply personally, and every appointment is confirmed by phone.</p>
+          <div class="btn-row anim-rise" style="--d:1.05s">
+            <a href="contact.html#appointment" class="btn btn-primary">Book Measurement</a>
+            <a href="tel:+910000000000" class="btn btn-secondary">Call the Studio</a>
+          </div>
+          <ul class="facts anim-rise" style="--d:1.2s">
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Measured in person</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Confirmed by phone</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Studio visits by appointment</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit">
+            <div class="orbit-glow"></div>
+            <div class="orbit-ring"></div>
+            <div class="orbit-3d">
+              <div class="orbit-tile" style="--r:0deg">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                <strong>Call</strong><span>+91 00000 00000</span>
+              </div>
+              <div class="orbit-tile" style="--r:90deg">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                <strong>Visit</strong><span>Anekal, Karnataka</span>
+              </div>
+              <div class="orbit-tile" style="--r:180deg">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                <strong>Write</strong><span>hello@aurel.example</span>
+              </div>
+              <div class="orbit-tile" style="--r:270deg">
+                <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <strong>Hours</strong><span>Mon - Sat, 10 AM - 7 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. APPOINTMENT FORM ============ -->
+    <section class="section" id="appointment">
+      <div class="container split-ap">
+        <div class="ap-copy reveal reveal-left">
+          <span class="eyebrow">Measurement Appointment</span>
+          <h2 class="section-title">Reserve your measurement session</h2>
+          <p>Tell us what you have in mind and when you would like to visit. We will confirm the slot by phone and send a reminder the day before.</p>
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bring a design photo or a fabric swatch</li>
+            <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wear the undergarments you plan to wear with the outfit</li>
+            <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sessions take about 45 to 60 minutes</li>
+          </ul>
+          <figure class="ap-frame tilt" data-tilt-max="6">
+            <img src="https://media.istockphoto.com/id/1340471999/photo/professional-cloth-designer-taking-measures-for-a-suit.jpg?s=612x612&w=0&k=20&c=YJ0C3IGqGnDiUE96j_p08K2YX8377BHu9K45SQJT11c=" alt="Tailor measuring a client with a soft tape" loading="lazy">
+            <span class="ap-badge">Hand-measured</span>
+          </figure>
+        </div>
+
+        <div class="form-card reveal reveal-right" style="--i:1">
+          <h3>Appointment request</h3>
+          <p>Fields marked with * are required.</p>
+
+          <form id="apptForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-name">Full name *</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+                <small class="err" id="e-name" aria-live="polite"></small>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone number *</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required aria-describedby="e-phone">
+                <small class="err" id="e-phone" aria-live="polite"></small>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+              </div>
+              <div class="field">
+                <label for="f-garment">Garment</label>
+                <select id="f-garment" name="garment">
+                  <option>Blouse</option>
+                  <option>Suit or blazer</option>
+                  <option>Kids wear</option>
+                  <option>Alteration</option>
+                  <option>Bridal or occasion</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-date">Preferred date *</label>
+                <input id="f-date" name="date" type="date" required aria-describedby="e-date">
+                <small class="err" id="e-date" aria-live="polite"></small>
+              </div>
+              <div class="field">
+                <label for="f-time">Preferred time</label>
+                <select id="f-time" name="time">
+                  <option>10:00 AM</option>
+                  <option>11:30 AM</option>
+                  <option>1:00 PM</option>
+                  <option>2:30 PM</option>
+                  <option>4:00 PM</option>
+                  <option>5:30 PM</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="f-notes">Design or fabric notes</label>
+                <textarea id="f-notes" name="notes" rows="4" placeholder="Tell us about the garment, occasion or fabric you have in mind."></textarea>
+              </div>
+              <div class="field full check">
+                <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
+                <label for="f-consent">I agree that AUREL may contact me about this appointment. Read our <a href="privacy-policy.html">Privacy Policy</a>. *</label>
+                <small class="err" id="e-consent" aria-live="polite"></small>
+              </div>
+            </div>
+            <div class="form-foot">
+              <button type="submit" class="btn btn-primary">Request Appointment</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. VISIT / CHANNELS ============ -->
+    <section class="section section-alt" id="visit">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Visit and Reach Us</span>
+          <h2 class="section-title">Four ways to reach the studio</h2>
+          <p>Call for a quick question, write for fabric advice, or walk in on your appointment day.</p>
+        </div>
+
+        <div class="visit-grid">
+          <div class="reveal reveal-left">
+            <figure class="visit-img tilt" data-tilt-max="5">
+              <img src="https://www.fibrearts.net.au/uploads/1/3/7/7/137767309/atelier-2_orig.jpg" alt="Inside the AUREL studio with fabric rolls and a cutting table" loading="lazy">
+              <figcaption class="float-tag">Studio visits by appointment</figcaption>
+            </figure>
+          </div>
+
+          <div class="info-grid">
+            <div class="reveal reveal-zoom" style="--i:0">
+              <article class="info-card">
+                <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+                <h3>Visit the Studio</h3>
+                <p>Your street address, Anekal, Karnataka</p>
+                <a class="text-link" href="#map">Get directions <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </article>
+            </div>
+            <div class="reveal reveal-zoom" style="--i:1">
+              <article class="info-card">
+                <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+                <h3>Call</h3>
+                <p><a class="val" href="tel:+910000000000">+91 00000 00000</a></p> <br>
+                <h3>Whatsapp</h3>
+                 <p><a class="val" href="tel:+910000000000">+91 9876543210</a></p>
+              </article>
+            </div>
+            <div class="reveal reveal-zoom" style="--i:2">
+              <article class="info-card">
+                <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+                <h3>Write</h3>
+                <p><a class="val" href="mailto:hello@aurel.example">hello@aurel.example</a></p>
+              </article>
+            </div>
+            <div class="reveal reveal-zoom" style="--i:3">
+              <article class="info-card">
+                <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+                <h3>Studio Hours</h3>
+                <p>Mon - Sat: 10:00 AM - 7:00 PM</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. MAP ============ -->
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Find the Studio</span>
+          <h2 class="section-title">Find us in Anekal</h2>
+          <p>Open the map for directions from your area. Call the studio if you need help finding the entrance.</p>
+        </div>
+
+        <div class="map-wrap">
+          <div class="reveal reveal-left">
+            <div class="map-frame tilt" data-tilt-max="4">
+              <iframe src="https://maps.google.com/maps?q=Anekal%2C+Karnataka&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title="Map showing the AUREL studio location in Anekal, Karnataka" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <span class="map-scan" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <aside class="reveal reveal-right" style="--i:1">
+            <div class="map-card">
+              <div class="map-pin"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>AUREL Tailoring Studio</h3>
+              <p>Your street address, Anekal, Karnataka</p>
+              <ul class="map-list">
+                <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Mon - Sat: 10:00 AM - 7:00 PM</li>
+                <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>+91 00000 00000</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Anekal%2C+Karnataka" target="_blank" rel="noopener">Get Directions <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a class="btn btn-secondary" href="tel:+910000000000">Call the Studio</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. FAQ / BEFORE YOU VISIT ============ -->
+    <section class="section" id="before-you-visit">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Before You Visit</span>
+          <h2 class="section-title">Helpful details before your appointment</h2>
+          <p>A few quick notes to make your first fitting smoother and more productive.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="reveal reveal-zoom" style="--i:0">
+            <article class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h3>What to bring</h3>
+              <p>Carry a reference image, fabric swatch, jewellery ideas and the footwear you plan to wear so the fitting feels more accurate.</p>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:1">
+            <article class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+              <h3>How long does it take?</h3>
+              <p>Most measurements and discussions last 45 to 60 minutes. For bridal and custom work, we may recommend a second fitting.</p>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:2">
+            <article class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>How we confirm</h3>
+              <p>After your request, we confirm the appointment by phone and share any material or sizing guidance before your visit.</p>
+            </article>
+          </div>
+          <div class="reveal reveal-zoom" style="--i:3">
+            <article class="info-card">
+              <div class="info-icon"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+              <h3>Need quick advice first?</h3>
+              <p>Send a note to <a class="val" href="mailto:hello@aurel.example">hello@aurel.example</a> and we will reply with the next available suggestion.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. CTA: Quick Booking (directly above footer) ============ -->
+    <section class="section section-alt" id="appointment-cta" aria-labelledby="cta3-title">
+      <div class="container">
+        <div class="cta3-panel reveal">
+          <div class="cta3-ruler" aria-hidden="true"></div>
+
+          <div class="cta3-body">
+            <div class="cta3-copy reveal reveal-left">
+              <span class="eyebrow">Quick Booking</span>
+              <h2 class="section-title" id="cta3-title">Hold a slot, and we will take the measure.</h2>
+              <p>Pick a time that suits you. We hold the slot, confirm it by phone and pass your choice straight to the appointment form. Sessions take about 45 to 60 minutes.</p>
+              <p class="cta3-readout" aria-live="polite">Selected slot <strong id="cta3Pick">1:00 PM</strong></p>
+              <div class="btn-row">
+                <button type="button" class="btn btn-primary" id="cta3Book">Book This Slot <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                <a href="tel:+910000000000" class="btn btn-secondary">Call the Studio</a>
+              </div>
+            </div>
+
+            <div class="cta3-slots reveal reveal-right" style="--i:1">
+              <div class="cta3-reel" aria-hidden="true">
+                <div class="reel-spin">
+                  <span class="reel-blade" style="--r:0deg"></span>
+                  <span class="reel-blade" style="--r:30deg"></span>
+                  <span class="reel-blade" style="--r:60deg"></span>
+                  <span class="reel-blade" style="--r:90deg"></span>
+                  <span class="reel-blade" style="--r:120deg"></span>
+                  <span class="reel-blade" style="--r:150deg"></span>
+                  <span class="reel-blade" style="--r:180deg"></span>
+                  <span class="reel-blade" style="--r:210deg"></span>
+                  <span class="reel-blade" style="--r:240deg"></span>
+                  <span class="reel-blade" style="--r:270deg"></span>
+                  <span class="reel-blade" style="--r:300deg"></span>
+                  <span class="reel-blade" style="--r:330deg"></span>
+                </div>
+                <div class="reel-core">
+                  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 10h3M15 14h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+              </div>
+              <p class="cta3-label">Studio slots, Mon - Sat</p>
+              <div class="cta3-chips" role="group" aria-label="Choose a time">
+                <button type="button" class="slot" style="--k:0" aria-pressed="false" data-time="10:00 AM">10:00 AM</button>
+                <button type="button" class="slot" style="--k:1" aria-pressed="false" data-time="11:30 AM">11:30 AM</button>
+                <button type="button" class="slot" style="--k:2" aria-pressed="true" data-time="1:00 PM">1:00 PM</button>
+                <button type="button" class="slot" style="--k:3" aria-pressed="false" data-time="2:30 PM">2:30 PM</button>
+                <button type="button" class="slot" style="--k:4" aria-pressed="false" data-time="4:00 PM">4:00 PM</button>
+                <button type="button" class="slot" style="--k:5" aria-pressed="false" data-time="5:30 PM">5:30 PM</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="AUREL home">
+          <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+          <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+          <span class="brand-text">
+            <span class="brand-name">AUREL</span>
+            <span class="brand-tag">Timeless &amp; classic</span>
+          </span>
+        </a>
+        <p>A tailoring and dress stitching studio for blouses, suits, kids wear and careful alterations.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8.5V7c0-.8.4-1.2 1.3-1.2H17V3h-2.4C12 3 10.6 4.5 10.6 6.8v1.7H8.5V12h2.1v9H14v-9h2.6l.4-3.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.8 0-2.6l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.7 0 3-1.8 3-4.4 0-2.3-1.6-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.2.1.1.1.2.1.3l-.3 1.1c0 .2-.1.2-.3.1-1.2-.6-2-2.3-2-3.8 0-3.1 2.3-6 6.5-6 3.4 0 6 2.4 6 5.7 0 3.4-2.1 6.1-5.1 6.1-1 0-1.9-.5-2.2-1.1l-.6 2.3c-.2.8-.8 1.8-1.2 2.4A9 9 0 1 0 12 3z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Fabric Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#blouses">Blouses</a></li>
+          <li><a href="services.html#suits">Suits</a></li>
+          <li><a href="services.html#kids">Kids Wear</a></li>
+           <li><a href="services.html#designing">Designing</a></li>
+          <li><a href="services.html#alterations">Alterations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit the Studio</h4>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Your street address, Anekal, Karnataka</span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="mailto:hello@aurel.example">hello@aurel.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Mon - Sat: 10:00 AM - 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
+        <ul class="legal">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="contact.js">
+
+  </script>
+</body>
+</html>

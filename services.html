@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | AUREL Tailoring &amp; Dress Stitching Studio</title>
+  <meta name="description" content="AUREL services: custom blouses, tailored suits, kids wear and alterations. Timeless &amp; classic craft, measured and stitched with care.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply saved theme / direction before paint (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aurel-theme');
+        var d = localStorage.getItem('aurel-dir');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Shared SVG symbols (checkmark) -->
+  <svg class="ck-sym" aria-hidden="true" focusable="false">
+    <symbol id="ck" viewBox="0 0 24 24">
+      <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="AUREL home">
+        <!-- Logo 1: shown in LIGHT mode | Logo 2: shown in DARK mode -->
+        <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+        <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+        <span class="brand-text">
+          <span class="brand-name">AUREL</span>
+          <span class="brand-tag">Timeless &amp; classic</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Home
+              <svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="index.html">Home 1 <small>Classic Studio</small></a></li>
+              <li><a href="index-2.html">Home 2 <small>Bridal &amp; Occasion</small></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li><a class="nav-link is-active" href="services.html" aria-current="page">SERVICES</a></li>
+          <li><a class="nav-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="nav-link" href="blog.html">BLOG</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <!-- The ONLY call-to-action in the header -->
+        <a href="/bookmeasurement.html" class="btn btn-primary header-cta">Book Measurement</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO (services, full viewport) ============ -->
+    <section class="sh" id="services-hero">
+      <img class="sh-bg" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c2a3f3205968159.66c4a3ab332e3.jpg" alt="" loading="eager">
+      <div class="sh-overlay" aria-hidden="true"></div>
+      <svg class="sh-stitch" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40 C 120 0, 220 80, 340 40 S 560 0, 600 40"/>
+      </svg>
+
+      <div class="container sh-grid">
+        <div class="sh-copy">
+          <span class="eyebrow anim-rise" style="--d:.1s">Our Services</span>
+          <h1>
+            <span class="w" style="--w:0">Classic</span>
+            <span class="w" style="--w:1">cuts.</span>
+            <em><span class="w" style="--w:2">Premium</span></em>
+            <span class="w" style="--w:3">finish.</span>
+            <span class="w" style="--w:4">Stitched</span>
+            <span class="w" style="--w:5">for</span>
+            <span class="w" style="--w:6">every</span>
+            <span class="w" style="--w:7">occasion.</span>
+          </h1>
+          <p class="lead anim-rise" style="--d:.7s">Blouses, suits, kids wear and alterations, measured for you and finished by hand. Every AUREL service follows the same patient process, from first measurement to final press.</p>
+          <div class="btn-row anim-rise" style="--d:.85s">
+            <a href="contact.html#appointment" class="btn btn-primary">Book a Fitting</a>
+            <a href="#packages" class="btn btn-secondary">Compare Packages</a>
+          </div>
+          <ul class="sh-facts anim-rise" style="--d:1s">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Measured in person</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free first adjustment</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hand finished</li>
+          </ul>
+        </div>
+
+        <div class="sh-visual" aria-hidden="true">
+          <div class="sh-ring2d"></div>
+          <div class="sh-ring2d r2"></div>
+          <div class="sh-carousel">
+            <div class="sh-card" style="--a:0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M8 3l-5 3 2 5 2-1v11h10V10l2 1 2-5-5-3-2 2h-2z"/></svg>
+              <strong>Blouses</strong><span>01</span>
+            </div>
+            <div class="sh-card" style="--a:90">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M9 3l3 4 3-4M7 3l-3 2 2 9 1-1v8h8v-8l1 1 2-9-3-2-2 3-3 1-3-1z"/></svg>
+              <strong>Suits</strong><span>02</span>
+            </div>
+            <div class="sh-card" style="--a:180">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M9 3h6l1 4 3 14H5l3-14z M9 3l3 4 3-4"/></svg>
+              <strong>Kids Wear</strong><span>03</span>
+            </div>
+            <div class="sh-card" style="--a:270">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8 8l12 10M8 16L20 6"/></svg>
+              <strong>Alterations</strong><span>04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-index">
+        <ul class="sh-index-list container">
+          <li><a href="#blouses"><span class="ix-no">01</span><span><strong>Blouses</strong><small>Princess &amp; back-open</small></span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#suits"><span class="ix-no">02</span><span><strong>Suits</strong><small>Structured &amp; classic</small></span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#kids"><span class="ix-no">03</span><span><strong>Kids Wear</strong><small>Festive &amp; everyday</small></span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#alterations"><span class="ix-no">04</span><span><strong>Alterations</strong><small>Fit like new</small></span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 2. SIGNATURE SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Signature Services</span>
+          <h2 class="section-title">Four disciplines, one standard of finish</h2>
+          <p>Each garment is measured, cut and finished by a tailor who stays with it from the first pattern to the final press.</p>
+        </div>
+
+        <!-- 01 Blouses -->
+        <div class="svc-row" id="blouses">
+          <div class="svc-media reveal reveal-left">
+            <span class="svc-no" aria-hidden="true">01</span>
+            <div class="svc-frame tilt" data-tilt-max="6">
+              <img src="https://adhyadesignerstudio.com/wp-content/uploads/2025/11/Untitled-design-65-796x1024.png" alt="Custom stitched blouse on a dress form" loading="lazy">
+            </div>
+          </div>
+          <div class="svc-copy reveal reveal-right">
+            <span class="eyebrow">Blouses</span>
+            <h3>Blouses cut for your shape</h3>
+            <svg class="under" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8 C40 2, 100 14, 158 4"/></svg>
+            <p>Princess cuts, back-open designs and padded styles, drafted from your own measurements. Necklines, sleeves and closures are chosen for your occasion and comfort.</p>
+            <ul class="spec-grid">
+              <li><svg class="ck"><use href="#ck"/></svg>Princess and sweetheart cuts</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Back-open and deep-back designs</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Padded and fully lined</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Hand embroidery and piping</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book This Service</a>
+              <a href="#packages" class="btn btn-secondary">See Packages</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Suits -->
+        <div class="svc-row rev" id="suits">
+          <div class="svc-media reveal reveal-right">
+            <span class="svc-no" aria-hidden="true">02</span>
+            <div class="svc-frame tilt" data-tilt-max="6">
+              <img src="https://img.freepik.com/premium-photo/blue-suit-hanging-hanger-white-background_640251-22638.jpg" alt="Tailored suit jacket on a hanger" loading="lazy">
+            </div>
+          </div>
+          <div class="svc-copy reveal reveal-left">
+            <span class="eyebrow">Suits</span>
+            <h3>Suits with a structured line</h3>
+            <svg class="under" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8 C40 2, 100 14, 158 4"/></svg>
+            <p>Two and three-piece suits, blazers and trousers cut on a classic pattern, with canvas-supported fronts that hold their shape through a full day of wear.</p>
+            <ul class="spec-grid">
+              <li><svg class="ck"><use href="#ck"/></svg>Two and three-piece sets</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Structured shoulders</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Half or full canvas construction</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Trousers and waistcoats</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book This Service</a>
+              <a href="#packages" class="btn btn-secondary">See Packages</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Kids Wear -->
+        <div class="svc-row" id="kids">
+          <div class="svc-media reveal reveal-left">
+            <span class="svc-no" aria-hidden="true">03</span>
+            <div class="svc-frame tilt" data-tilt-max="6">
+              <img src="https://i.pinimg.com/originals/f7/f5/e1/f7f5e105dfff5bfd61cc2d08d7594477.jpg" alt="Stitched festive frock for a child" loading="lazy">
+            </div>
+          </div>
+          <div class="svc-copy reveal reveal-right">
+            <span class="eyebrow">Kids Wear</span>
+            <h3>Kids wear with room to grow</h3>
+            <svg class="under" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8 C40 2, 100 14, 158 4"/></svg>
+            <p>Festive frocks, ethnic sets and school uniforms, finished with soft linings, comfortable seams and allowances that let children move freely as they grow.</p>
+            <ul class="spec-grid">
+              <li><svg class="ck"><use href="#ck"/></svg>Festive frocks and ethnic sets</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Soft, skin-friendly linings</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Growth allowance in seams</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Uniforms and school wear</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book This Service</a>
+              <a href="#packages" class="btn btn-secondary">See Packages</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 Alterations -->
+        <div class="svc-row rev" id="alterations">
+          <div class="svc-media reveal reveal-right">
+            <span class="svc-no" aria-hidden="true">04</span>
+            <div class="svc-frame tilt" data-tilt-max="6">
+              <img src="https://cdn.shopify.com/s/files/1/0594/8519/2376/files/fabric_being_stitched_on_a_sewing_machine.jpg?v=1663179121&width=960" alt="Garment alteration being stitched" loading="lazy">
+            </div>
+          </div>
+          <div class="svc-copy reveal reveal-left">
+            <span class="eyebrow">Alterations</span>
+            <h3>Alterations that look untouched</h3>
+            <svg class="under" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8 C40 2, 100 14, 158 4"/></svg>
+            <p>Hemming, resizing, taking in and letting out, plus zip and lining repair. We match thread and stitch length so the work is invisible.</p>
+            <ul class="spec-grid">
+              <li><svg class="ck"><use href="#ck"/></svg>Hemming and length changes</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Resizing and taking in</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Letting out and seam recovery</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Zip and lining repair</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book This Service</a>
+              <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. PACKAGES (classic tiers) ============ -->
+    <section class="section section-alt" id="packages">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Packages</span>
+          <h2 class="section-title">Choose the level of finish you want</h2>
+          <p>Every package includes a measurement session, fabric guidance and a final press. Pricing is confirmed after your consultation.</p>
+        </div>
+
+        <div class="tiers">
+          <article class="tier tilt reveal reveal-zoom" style="--i:0" data-tilt-max="5">
+            <div class="tier-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3v4M8 7h8l2 6-6 2-6-2z M6 13v8h12v-8"/></svg>
+            </div>
+            <h3>Everyday Classic</h3>
+            <p class="tier-for">Office wear, daily blouses and simple alterations.</p>
+            <ul class="tier-list">
+              <li><svg class="ck"><use href="#ck"/></svg>Hand-taken measurements</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Standard lining and trims</li>
+              <li><svg class="ck"><use href="#ck"/></svg>One trial fitting</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Jacket Bloue tight fitting</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Free adjustment after first wear</li>
+            </ul>
+            <div class="tier-foot">
+              <p class="tier-price">Price on consultation</p>
+              <a href="contact.html#appointment" class="btn btn-secondary">Choose Classic</a>
+            </div>
+          </article>
+
+          <article class="tier featured tilt reveal reveal-zoom" style="--i:1" data-tilt-max="5">
+            <span class="tier-badge">Most chosen</span>
+            <div class="tier-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+            </div>
+            <h3>Occasion &amp; Festive</h3>
+            <p class="tier-for">Festive blouses, suits for functions and celebration wear for children.</p>
+            <ul class="tier-list">
+              <li><svg class="ck"><use href="#ck"/></svg>Access to the fabric library</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Embroidery or piping detail</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Two trial fittings</li>
+              <li><svg class="ck"><use href="#ck"/></svg>One dedicated tailor per garment</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Pressed and packed for delivery</li>
+            </ul>
+            <div class="tier-foot">
+              <p class="tier-price">Price on consultation</p>
+              <a href="contact.html#appointment" class="btn btn-primary">Choose Occasion</a>
+            </div>
+          </article>
+
+          <article class="tier tilt reveal reveal-zoom" style="--i:2" data-tilt-max="5">
+            <div class="tier-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 18c3-1 5-4 8-4s5 3 8 4M7 14c1-4 3-8 5-8s4 4 5 8M12 3v3"/></svg>
+            </div>
+            <h3>Bridal &amp; Couture</h3>
+            <p class="tier-for">Bridal blouses, bespoke suits and sets with hand zari and bead work.</p>
+            <ul class="tier-list">
+              <li><svg class="ck"><use href="#ck"/></svg>Multiple design consultations</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Hand zari and bead work options</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Up to three trial fittings</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Structured canvas tailoring</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Storage bag and care guide</li>
+            </ul>
+            <div class="tier-foot">
+              <p class="tier-price">Price on consultation</p>
+              <a href="contact.html#appointment" class="btn btn-secondary">Plan Bridal</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="packages-note reveal">Not sure which package fits? <a class="text-link" href="contact.html">Talk to our tailors <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ============ 4. FITTING GUIDE + FAQ ============ -->
+    <section class="section" id="guide">
+      <div class="container">
+        <div class="guide-grid">
+          <div class="reveal reveal-left">
+            <div class="guide-fig tilt" data-tilt-max="4">
+              <img src="https://media.istockphoto.com/id/1161602203/photo/woman-measuring-jacket-on-male-dress-form.jpg?s=612x612&w=0&k=20&c=-ns5PfkDt5TGZLOSDmp8QmxWz8x5qgbT3hf1wEJS1Hk=" alt="Tailor measuring a client with a tape" loading="lazy">
+              <svg class="guide-lines" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+                <path class="gl-line" d="M60 150 H340"/>
+                <path class="gl-line" d="M60 225 H340" style="--d:.3s"/>
+                <path class="gl-line" d="M60 290 H340" style="--d:.5s"/>
+                <path class="gl-line" d="M200 60 V470" style="--d:.2s"/>
+                <path class="gl-line" d="M320 190 L360 290" style="--d:.7s"/>
+              </svg>
+              <button class="hs" style="--x:50%;--y:30%" aria-pressed="true" aria-label="Point 1: Bust" data-title="Bust" data-text="Measure around the fullest part of the bust with the tape level and snug, not compressed. Stand relaxed with your arms at your sides.">1</button>
+              <button class="hs" style="--x:50%;--y:45%" aria-pressed="false" aria-label="Point 2: Waist" data-title="Waist" data-text="Measure at the natural waistline, the narrowest point of the torso. Keep the tape comfortable and do not pull it tight.">2</button>
+              <button class="hs" style="--x:50%;--y:58%" aria-pressed="false" aria-label="Point 3: Hip" data-title="Hip" data-text="Measure around the fullest part of the hips, roughly 20 cm below the waist, with your feet together.">3</button>
+              <button class="hs" style="--x:80%;--y:40%" aria-pressed="false" aria-label="Point 4: Sleeve" data-title="Sleeve" data-text="Measure from the shoulder point down the outside of the arm to the wrist, with the elbow slightly bent.">4</button>
+              <button class="hs" style="--x:50%;--y:80%" aria-pressed="false" aria-label="Point 5: Inseam" data-title="Inseam" data-text="Measure from the crotch seam down the inside of the leg to your desired hem length.">5</button>
+            </div>
+          </div>
+
+          <div class="guide-copy reveal reveal-right">
+            <span class="eyebrow">Fitting Guide</span>
+            <h2 class="section-title">Know your measurements before you visit</h2>
+            <p>Select a point on the figure to see how it is taken. Our tailors check every measurement with you in person, so you never have to get it perfect at home.</p>
+            <div class="guide-panel" id="guidePanel" aria-live="polite">
+              <span class="gp-step" id="gpStep">Point 01 of 05</span>
+              <h3 id="gpTitle">Bust</h3>
+              <p id="gpText">Measure around the fullest part of the bust with the tape level and snug, not compressed. Stand relaxed with your arms at your sides.</p>
+            </div>
+            <a class="text-link" href="contact.html#appointment">Book a measurement session <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="faq reveal">
+          <div class="faq-head">
+            <span class="eyebrow">Questions</span>
+            <h3>Good to know before you book</h3>
+          </div>
+
+          <details class="faq-item" open>
+            <summary>How do I book a measurement appointment?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <div class="faq-a"><p>Use the Book Measurement button or call the studio during opening hours. We will confirm a slot, and you can bring any design photos or fabric swatches you have in mind.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I bring my own fabric?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <div class="faq-a"><p>Yes. Bring the full length you plan to use, with a little extra. Our tailor will check its weight, stretch and washing needs before cutting.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does a custom garment take?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <div class="faq-a"><p>Timing depends on the garment and the finish you choose. We confirm your delivery date at the measurement appointment so you know exactly what to expect.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you alter garments stitched elsewhere?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <div class="faq-a"><p>Yes. Bring the garment in and we will assess the fabric and seams before quoting, so we can tell you what is possible.</p></div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there an adjustment after delivery?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <div class="faq-a"><p>Yes. Standard packages include one free adjustment after your first wear. Fit changes after that are quoted separately.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. CTA: Measurement Card (directly above footer) ============ -->
+    <section class="section section-alt" id="appointment-cta" aria-labelledby="fitCtaTitle">
+      <div class="container">
+        <div class="fit-card reveal reveal-zoom">
+
+          <div class="fit-copy reveal reveal-left">
+            <span class="eyebrow">Your Measurements</span>
+            <h2 class="section-title" id="fitCtaTitle">Start with one measurement. Finish with a fit that is yours.</h2>
+            <p>Our tailors measure you in person, then cut and fit every garment against your own figure, not a standard size chart.</p>
+            <ul class="fit-points">
+              <li><svg class="ck"><use href="#ck"/></svg>Measured by a tailor, not a size chart</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Fitted again before the final press</li>
+              <li><svg class="ck"><use href="#ck"/></svg>Your measurements kept on file for next time</li>
+            </ul>
+            <div class="btn-row">
+              <a href="contact.html#appointment" class="btn btn-primary">Book Measurement</a>
+              <a href="tel:+910000000000" class="btn btn-secondary">Call the Studio</a>
+            </div>
+          </div>
+
+          <div class="fit-visual reveal reveal-right" aria-hidden="true">
+            <div class="df-stage">
+              <div class="df-form">
+                <span class="df-ring" style="--d:74px;--y:20px"></span>
+                <span class="df-ring" style="--d:200px;--y:52px"></span>
+                <span class="df-ring" style="--d:176px;--y:115px"></span>
+                <span class="df-ring" style="--d:138px;--y:180px"></span>
+                <span class="df-ring" style="--d:184px;--y:240px"></span>
+                <span class="df-ring base" style="--d:214px;--y:302px"></span>
+              </div>
+
+              <span class="df-line" style="--y:52px;--i:0"></span>
+              <span class="df-tag" style="--y:52px;--i:0"><small>Shoulder</small><b>42 cm</b></span>
+
+              <span class="df-line" style="--y:115px;--i:1"></span>
+              <span class="df-tag" style="--y:115px;--i:1"><small>Bust</small><b>86 cm</b></span>
+
+              <span class="df-line" style="--y:180px;--i:2"></span>
+              <span class="df-tag" style="--y:180px;--i:2"><small>Waist</small><b>68 cm</b></span>
+
+              <span class="df-line" style="--y:240px;--i:3"></span>
+              <span class="df-tag" style="--y:240px;--i:3"><small>Hip</small><b>94 cm</b></span>
+
+              <span class="df-line" style="--y:302px;--i:4"></span>
+              <span class="df-tag" style="--y:302px;--i:4"><small>Length</small><b>108 cm</b></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="AUREL home">
+          <!-- Logo 1: shown in LIGHT mode | Logo 2: shown in DARK mode -->
+          <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
+          <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
+          <span class="brand-text">
+            <span class="brand-name">AUREL</span>
+            <span class="brand-tag">Timeless &amp; classic</span>
+          </span>
+        </a>
+        <p>A tailoring and dress stitching studio for blouses, suits, kids wear and careful alterations.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8.5V7c0-.8.4-1.2 1.3-1.2H17V3h-2.4C12 3 10.6 4.5 10.6 6.8v1.7H8.5V12h2.1v9H14v-9h2.6l.4-3.5z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.8 0-2.6l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.7 0 3-1.8 3-4.4 0-2.3-1.6-3.9-4-3.9-2.7 0-4.3 2-4.3 4.1 0 .8.3 1.7.7 2.2.1.1.1.2.1.3l-.3 1.1c0 .2-.1.2-.3.1-1.2-.6-2-2.3-2-3.8 0-3.1 2.3-6 6.5-6 3.4 0 6 2.4 6 5.7 0 3.4-2.1 6.1-5.1 6.1-1 0-1.9-.5-2.2-1.1l-.6 2.3c-.2.8-.8 1.8-1.2 2.4A9 9 0 1 0 12 3z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Fabric Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#blouses">Blouses</a></li>
+          <li><a href="services.html#suits">Suits</a></li>
+          <li><a href="services.html#kids">Kids Wear</a></li>
+          <li><a href="services.html#designing">Designing</a></li>
+          <li><a href="services.html#alterations">Alterations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit the Studio</h4>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Your street address, Anekal, Karnataka</span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="mailto:hello@aurel.example">hello@aurel.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Mon - Sat: 10:00 AM - 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
+        <ul class="legal">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="services.js">
+
+  </script> 
+</body>
+</html>
