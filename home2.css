@@ -435,6 +435,47 @@ button { font: inherit; cursor: pointer; }
 .look-back h3 { color: var(--secondary); }
 .look-back p { color: rgba(255, 255, 255, .85); font-size: .92rem; margin: 0; }
 
+/* ---------- NEW: BEFORE & AFTER sliders ---------- */
+.ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.ba-item { text-align: center; }
+.ba {
+  --pos: 50%;
+  position: relative; overflow: hidden; aspect-ratio: 4 / 5;
+  border-radius: var(--radius); border: 2px solid var(--secondary);
+  box-shadow: var(--shadow-lg); background: var(--surface);
+  touch-action: pan-y; user-select: none; -webkit-user-select: none;
+}
+.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.ba-before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba-line {
+  position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px;
+  background: var(--secondary); box-shadow: 0 0 14px rgba(0, 0, 0, .45); pointer-events: none;
+}
+.ba-knob {
+  position: absolute; top: 50%; left: var(--pos); width: 52px; height: 52px; margin: -26px 0 0 -26px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--primary); color: var(--secondary); border: 2px solid var(--secondary);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, .6); pointer-events: none;
+  transition: transform .3s var(--ease);
+}
+.ba:hover .ba-knob, .ba:focus-within .ba-knob { transform: scale(1.12); }
+.ba-tag {
+  position: absolute; top: 14px; padding: 6px 14px; border-radius: 999px;
+  font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  background: rgba(8, 24, 19, .78); color: #fff; border: 1px solid rgba(214, 187, 131, .6);
+  pointer-events: none;
+}
+.ba-tag.t-before { left: 14px; }
+.ba-tag.t-after { right: 14px; background: var(--secondary); color: var(--on-secondary); border-color: var(--secondary); }
+.ba-range {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
+  opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none;
+}
+.ba:focus-within { outline: 2px solid var(--secondary); outline-offset: 3px; }
+.ba-cap { margin-top: 18px; }
+.ba-cap h3 { font-size: 1.2rem; margin-bottom: .2em; }
+.ba-cap p { color: var(--muted); font-size: .9rem; margin: 0; }
+
 /* ---------- 5. PLAN AHEAD ---------- */
 .plan-visual { position: relative; perspective: 1000px; padding-bottom: 20px; }
 .plan-img {
@@ -474,103 +515,56 @@ button { font: inherit; cursor: pointer; }
 .quote footer strong { display: block; font-family: var(--font-display); }
 .quote footer span { font-size: .82rem; color: var(--muted); }
 
-/* ---------- 7. CTA: bridal pass reservation (directly above footer) ---------- */
-.cta2 { position: relative; padding: 110px 0; background: var(--bg); }
-.cta2-panel {
-  position: relative; isolation: isolate; overflow: hidden;
-  display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; align-items: center;
-  padding: 70px 72px;
+/* ---------- 7. NEW CTA: primary-colour split card with photo (directly above footer) ---------- */
+.cta4 { padding: 100px 0; background: var(--bg); }
+.cta4-card {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  background: var(--primary); color: #fff;
+  border: 1px solid var(--secondary); border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+}
+.cta4-card::before {
+  content: ''; position: absolute; z-index: -1; inset: 0;
   background:
-    radial-gradient(circle at 92% 8%, rgba(197, 166, 106, .18), transparent 50%),
-    radial-gradient(circle at 4% 100%, rgba(24, 91, 72, .10), transparent 50%),
-    var(--bg-alt);
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  box-shadow: var(--shadow-lg);
+    radial-gradient(circle at 0% 0%, rgba(214, 187, 131, .22), transparent 45%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, .035) 0 2px, transparent 2px 18px);
 }
-/* 2D: animated stitch border */
-.cta2-stitch {
-  position: absolute; inset: 14px; z-index: -1; pointer-events: none;
-  width: calc(100% - 28px); height: calc(100% - 28px); overflow: visible;
+.cta4-copy { padding: 60px 56px; }
+.cta4-copy .eyebrow { color: var(--secondary); padding-inline-start: 0; }
+.cta4-copy .eyebrow::before { display: none; }
+.cta4-copy h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin-bottom: .4em; color: #fff; }
+.cta4-copy > p { color: rgba(255, 255, 255, .86); max-width: 520px; }
+.cta4-label { display: block; margin: 24px 0 12px; font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255, 255, 255, .7); }
+.cta4-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.cta4-chips a {
+  padding: 8px 18px; border-radius: 999px; font-size: .88rem; font-weight: 500;
+  border: 1.5px solid rgba(214, 187, 131, .55); color: #fff; background: rgba(255, 255, 255, .06);
+  transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
 }
-.cta2-stitch rect {
-  fill: none; stroke: var(--secondary); stroke-width: 1.5;
-  stroke-dasharray: 6 8; opacity: .75;
-  animation: stitchRun 1.4s linear infinite;
-}
-@keyframes stitchRun { to { stroke-dashoffset: -28; } }
+.cta4-chips a:hover { background: var(--secondary); border-color: var(--secondary); color: var(--on-secondary); transform: translateY(-3px); }
+.cta4 .btn-primary { background: var(--secondary); color: var(--on-secondary); }
+.cta4 .btn-primary:hover { background: transparent; color: #fff; }
+.cta4 .btn-secondary { color: #fff; }
+.cta4 .btn-secondary:hover { background: var(--secondary); color: var(--on-secondary); }
+.cta4-hours { display: flex; align-items: center; gap: 10px; margin: 22px 0 0; font-size: .88rem; color: rgba(255, 255, 255, .8); }
+.cta4-hours svg { color: var(--secondary); flex: none; }
 
-.cta2-copy .eyebrow { color: #8a6d33; }
-[data-theme="dark"] .cta2 .eyebrow { color: var(--secondary); }
-.cta2-copy h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); margin-bottom: .4em; }
-.cta2-copy > p { color: var(--muted); }
-.cta2-checks { margin: 26px 0 34px; display: grid; gap: 12px; }
-.cta2-checks li { display: flex; align-items: center; gap: 12px; color: var(--text); font-size: .95rem; }
-.cta2-checks svg { flex: none; width: 20px; height: 20px; color: var(--primary); }
-[data-theme="dark"] .cta2-checks svg { color: var(--secondary); }
-.cta2-note { margin: 22px 0 0; font-size: .85rem; color: var(--muted); }
-
-/* 3D: orbit ring + floating ticket */
-.cta2-visual { position: relative; perspective: 1200px; display: grid; place-items: center; min-height: 420px; }
-.cta2-orbit {
-  position: absolute; width: 440px; height: 440px; border-radius: 50%;
-  border: 2px dashed rgba(197, 166, 106, .5);
-  transform: rotateX(70deg);
-  animation: ringSpin 30s linear infinite;
-  pointer-events: none;
+.cta4-photo { position: relative; min-height: 440px; clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%); background: var(--primary); }
+[dir="rtl"] .cta4-photo { clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%); }
+.cta4-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: kenburns 22s ease-in-out infinite alternate; }
+.cta4-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(transparent 55%, rgba(8, 24, 19, .55));
 }
-.ticket-wrap { position: relative; width: min(100%, 400px); transform-style: preserve-3d; }
-.ticket {
-  position: relative; transform-style: preserve-3d;
-  animation: ticketFloat 8s ease-in-out infinite;
-  background: var(--primary); color: var(--on-primary);
-  border: 2px solid var(--secondary); border-radius: 22px;
-  box-shadow: var(--shadow-lg);
-  padding: 28px 30px 24px;
-}
-@keyframes ticketFloat {
-  0%, 100% { transform: rotateX(4deg) rotateY(-8deg) translateY(0); }
-  50%      { transform: rotateX(-3deg) rotateY(8deg) translateY(-12px); }
-}
-.ticket-top {
-  display: flex; justify-content: space-between; gap: 12px;
-  font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--secondary);
-  padding-bottom: 14px; border-bottom: 1px dashed rgba(214, 187, 131, .5);
-}
-.ticket-kicker { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--secondary); margin: 22px 0 6px; }
-.ticket h3 { color: var(--on-primary); font-size: 1.6rem; margin-bottom: 14px; }
-.ticket-list li {
-  display: flex; align-items: center; gap: 14px;
-  padding: 12px 0; border-top: 1px solid rgba(214, 187, 131, .22);
-  font-size: .95rem;
-}
-.ticket-list span { font-family: var(--font-display); color: var(--secondary); font-size: 1.1rem; width: 34px; flex: none; }
-.ticket-foot {
-  display: flex; justify-content: space-between; align-items: flex-end; gap: 16px;
-  margin-top: 18px; padding-top: 18px; border-top: 1px dashed rgba(214, 187, 131, .5);
-}
-.ticket-foot small { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--on-primary); opacity: .7; }
-.ticket-foot strong { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
-.ticket-notch {
-  position: absolute; top: 66%; width: 28px; height: 28px; border-radius: 50%;
-  background: var(--bg-alt); border: 2px solid var(--secondary);
-  transform: translateY(-50%);
-}
-.ticket-notch.n1 { inset-inline-start: -16px; }
-.ticket-notch.n2 { inset-inline-end: -16px; }
-.stamp {
-  position: relative; width: 92px; height: 92px; border-radius: 50%; flex: none;
-  display: grid; place-items: center; text-align: center;
-  background: var(--secondary); color: var(--on-secondary);
-  font-family: var(--font-display); font-weight: 700; font-size: .95rem; line-height: 1.1;
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, .5);
+.cta4-badge {
+  position: absolute; z-index: 2; bottom: 24px; inset-inline-end: 24px;
+  display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 999px;
+  background: var(--secondary); color: var(--on-secondary); font-size: .82rem; font-weight: 500;
+  box-shadow: 0 16px 30px -12px rgba(0, 0, 0, .6);
   animation: floaty 6s ease-in-out infinite;
 }
-.stamp::before {
-  content: ''; position: absolute; inset: -8px; border-radius: 50%;
-  border: 1.5px dashed var(--secondary);
-  animation: spin 18s linear infinite;
-}
+.cta4-badge strong { font-family: var(--font-display); font-size: 1.05rem; }
 
 /* ---------- Footer (matches header) ---------- */
 .site-footer { background: #ffffff; color: var(--text); border-top: 1px solid var(--line); }
@@ -629,17 +623,18 @@ button { font: inherit; cursor: pointer; }
 @keyframes rise { to { opacity: 1; transform: none; } }
 @keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -14px; } }
 @keyframes spin { to { transform: rotate(360deg); } }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12) translateX(-1.5%); } }
 @keyframes ringSpin {
   from { transform: rotateX(68deg) rotateZ(0deg); }
   to   { transform: rotateX(68deg) rotateZ(360deg); }
 }
-@keyframes scrollDot { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(18px); } }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .edit-grid { grid-template-columns: repeat(2, 1fr); }
   .look-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .ba-grid { gap: 20px; }
 }
 
 @media (max-width: 960px) {
@@ -667,15 +662,20 @@ button { font: inherit; cursor: pointer; }
   .journey-grid { grid-template-columns: 1fr; gap: 60px; }
   .cols-3 { grid-template-columns: 1fr; }
 
-  .cta2-panel { grid-template-columns: 1fr; padding: 54px 36px; gap: 50px; text-align: center; }
-  .cta2-copy { text-align: center; }
-  .cta2-checks li { justify-content: center; }
-  .cta2-actions { justify-content: center; }
-  .cta2-orbit { width: 320px; height: 320px; }
+  .ba-grid { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+
+  .cta4-card { grid-template-columns: 1fr; }
+  .cta4-copy { padding: 44px 32px; text-align: center; }
+  .cta4-copy > p { margin-inline: auto; }
+  .cta4-chips, .cta4-copy .btn-row, .cta4-hours { justify-content: center; }
+  .cta4-copy .eyebrow { padding-inline: 34px; }
+  .cta4-copy .eyebrow::before { display: block; }
+  .cta4-photo, [dir="rtl"] .cta4-photo { clip-path: none; min-height: 300px; order: -1; }
 }
 
 @media (max-width: 620px) {
-  .section, .cta2 { padding: 80px 0; }
+  .section { padding: 80px 0; }
+  .cta4 { padding: 70px 0; }
   .header-actions { gap: 8px; }
   .header-cta { padding: 8px 14px; font-size: .8rem; }
   .icon-btn, .menu-btn { width: 36px; height: 36px; }
@@ -688,12 +688,8 @@ button { font: inherit; cursor: pointer; }
   .jr-no { inset-inline-start: -48px; }
   .bottom-inner { justify-content: center; text-align: center; }
   .hero-badges { gap: 20px; flex-wrap: wrap; }
-
-  .cta2-panel { padding: 36px 20px; border-radius: 20px; }
-  .ticket { padding: 22px 20px 20px; }
-  .ticket h3 { font-size: 1.35rem; }
-  .cta2-orbit { width: 260px; height: 260px; }
-  .stamp { width: 80px; height: 80px; font-size: .85rem; }
+  .cta4-card { border-radius: 20px; }
+  .cta4-copy { padding: 36px 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

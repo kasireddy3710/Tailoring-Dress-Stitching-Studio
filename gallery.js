@@ -1,4 +1,4 @@
-/* AUREL - Fabric Gallery scripts */
+ /* AUREL - Fabric Gallery scripts */
 (function () {
   'use strict';
 

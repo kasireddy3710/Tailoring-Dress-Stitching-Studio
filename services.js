@@ -1,4 +1,4 @@
-/* AUREL - Services page scripts */
+ /* AUREL - Services page scripts */
 (function () {
   'use strict';
 
@@ -50,6 +50,31 @@
     }
   });
 
+  /* ---------- Horizontal pinned process (scrolls sideways with vertical scroll) ---------- */
+  var hzWrap = $('#process'), hzSticky = $('.hz-sticky'), hzTrack = $('.hz-track'), hzBar = $('.hz-progress span');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateHorizontal() {
+    if (!hzWrap || reduceMotion) return;
+    var headerH = $('#header').offsetHeight;
+    var range = hzWrap.offsetHeight - hzSticky.offsetHeight;
+    var p = range > 0 ? (headerH - hzWrap.getBoundingClientRect().top) / range : 0;
+    p = Math.min(Math.max(p, 0), 1);
+
+    var isRtl = root.getAttribute('dir') === 'rtl';
+    var kids = hzTrack.children, minL = Infinity, maxR = -Infinity;
+    for (var k = 0; k < kids.length; k++) {
+      minL = Math.min(minL, kids[k].offsetLeft);
+      maxR = Math.max(maxR, kids[k].offsetLeft + kids[k].offsetWidth);
+    }
+    var END = 40, W = hzSticky.clientWidth;
+    var dist = isRtl ? Math.max(0, END - minL) : Math.max(0, maxR + END - W);
+    var dir = isRtl ? 1 : -1;
+
+    hzTrack.style.transform = 'translate3d(' + (dir * p * dist).toFixed(1) + 'px, 0, 0)';
+    hzBar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+  }
+
   /* ---------- Header shrink + scroll progress ---------- */
   var header = $('#header'), bar = $('.scroll-progress');
   function onScroll() {
@@ -57,8 +82,10 @@
     header.classList.toggle('scrolled', y > 30);
     var h = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+    updateHorizontal();
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
 
   /* ---------- Scroll reveal (page sections + footer) ---------- */

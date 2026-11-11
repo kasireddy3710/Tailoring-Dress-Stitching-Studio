@@ -22,8 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="contact.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -355,58 +354,20 @@
       </div>
     </section>
 
-    <!-- ============ 6. CTA: Quick Booking (directly above footer) ============ -->
-    <section class="section section-alt" id="appointment-cta" aria-labelledby="cta3-title">
-      <div class="container">
-        <div class="cta3-panel reveal">
-          <div class="cta3-ruler" aria-hidden="true"></div>
-
-          <div class="cta3-body">
-            <div class="cta3-copy reveal reveal-left">
-              <span class="eyebrow">Quick Booking</span>
-              <h2 class="section-title" id="cta3-title">Hold a slot, and we will take the measure.</h2>
-              <p>Pick a time that suits you. We hold the slot, confirm it by phone and pass your choice straight to the appointment form. Sessions take about 45 to 60 minutes.</p>
-              <p class="cta3-readout" aria-live="polite">Selected slot <strong id="cta3Pick">1:00 PM</strong></p>
-              <div class="btn-row">
-                <button type="button" class="btn btn-primary" id="cta3Book">Book This Slot <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <a href="tel:+910000000000" class="btn btn-secondary">Call the Studio</a>
-              </div>
-            </div>
-
-            <div class="cta3-slots reveal reveal-right" style="--i:1">
-              <div class="cta3-reel" aria-hidden="true">
-                <div class="reel-spin">
-                  <span class="reel-blade" style="--r:0deg"></span>
-                  <span class="reel-blade" style="--r:30deg"></span>
-                  <span class="reel-blade" style="--r:60deg"></span>
-                  <span class="reel-blade" style="--r:90deg"></span>
-                  <span class="reel-blade" style="--r:120deg"></span>
-                  <span class="reel-blade" style="--r:150deg"></span>
-                  <span class="reel-blade" style="--r:180deg"></span>
-                  <span class="reel-blade" style="--r:210deg"></span>
-                  <span class="reel-blade" style="--r:240deg"></span>
-                  <span class="reel-blade" style="--r:270deg"></span>
-                  <span class="reel-blade" style="--r:300deg"></span>
-                  <span class="reel-blade" style="--r:330deg"></span>
-                </div>
-                <div class="reel-core">
-                  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 10h3M15 14h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </div>
-              </div>
-              <p class="cta3-label">Studio slots, Mon - Sat</p>
-              <div class="cta3-chips" role="group" aria-label="Choose a time">
-                <button type="button" class="slot" style="--k:0" aria-pressed="false" data-time="10:00 AM">10:00 AM</button>
-                <button type="button" class="slot" style="--k:1" aria-pressed="false" data-time="11:30 AM">11:30 AM</button>
-                <button type="button" class="slot" style="--k:2" aria-pressed="true" data-time="1:00 PM">1:00 PM</button>
-                <button type="button" class="slot" style="--k:3" aria-pressed="false" data-time="2:30 PM">2:30 PM</button>
-                <button type="button" class="slot" style="--k:4" aria-pressed="false" data-time="4:00 PM">4:00 PM</button>
-                <button type="button" class="slot" style="--k:5" aria-pressed="false" data-time="5:30 PM">5:30 PM</button>
-              </div>
-            </div>
-          </div>
+    <!-- ============ 6. CTA BLOCK (background colour, no section wrapper) ============ -->
+    <div class="cta-block reveal" role="region" aria-label="Book a measurement">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <span class="cta-kicker">Ready when you are</span>
+          <h2>Your perfect fit starts with one measurement.</h2>
+          <p>Book a session at the studio in Anekal or call us for fabric advice. Every request is confirmed personally by our tailors.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#appointment" class="btn cta-btn-gold">Book Measurement <svg class="arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="tel:+910000000000" class="btn cta-btn-outline">Call the Studio</a>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- ================= FOOTER ================= -->

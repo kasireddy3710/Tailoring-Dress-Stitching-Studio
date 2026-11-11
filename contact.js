@@ -141,28 +141,6 @@
     dateInput.min = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate());
   });
 
-  /* ---------- CTA: quick slot picker ---------- */
-  var slotBtns = $$('.slot');
-  var pick = $('#cta3Pick');
-  var bookSlot = $('#cta3Book');
-  var timeSelect = $('#f-time');
-
-  function chooseSlot(btn) {
-    slotBtns.forEach(function (s) {
-      s.setAttribute('aria-pressed', s === btn ? 'true' : 'false');
-    });
-    pick.textContent = btn.getAttribute('data-time');
-  }
-  slotBtns.forEach(function (s) {
-    s.addEventListener('click', function () { chooseSlot(s); });
-  });
-  // Pass the chosen slot to the appointment form, then move to it
-  bookSlot.addEventListener('click', function () {
-    timeSelect.value = pick.textContent;
-    document.getElementById('appointment').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setTimeout(function () { $('#f-name').focus({ preventScroll: true }); }, 700);
-  });
-
   /* ---------- Footer year ---------- */
   var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
 })();

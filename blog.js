@@ -122,26 +122,6 @@
     arBar.style.transform = 'scaleX(' + (h > 0 ? arBody.scrollTop / h : 0) + ')';
   }, { passive: true });
 
-  /* ---------- Monthly Notes subscribe form ---------- */
-  /* Front-end validation only. Nothing is sent in this build:
-     connect the submit step to your newsletter service where marked. */
-  var jnForm = $('#jnForm'), jnEmail = $('#jnEmail'), jnStatus = $('#jnStatus');
-  jnForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var value = jnEmail.value.trim();
-    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
-    if (!valid) {
-      jnStatus.textContent = 'Please enter a valid email address.';
-      jnStatus.classList.add('is-error');
-      jnEmail.focus();
-      return;
-    }
-    jnStatus.classList.remove('is-error');
-    // TODO: send `value` to the newsletter endpoint here (e.g. fetch POST).
-    jnStatus.textContent = 'Thank you. Your first note will arrive once the studio confirms your address.';
-    jnForm.reset();
-  });
-
   /* ---------- Footer year ---------- */
   var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
 })();

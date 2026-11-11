@@ -464,85 +464,75 @@ button { font: inherit; cursor: pointer; }
 .pick h3 { font-size: 1.2rem; }
 .pick p { color: var(--muted); font-size: .92rem; margin: 0; }
 
-/* ---------- 5. CTA: Swatch Pack (directly above footer, no image) ---------- */
-.swatch-cta {
-  overflow: hidden; isolation: isolate;
-  background:
-    radial-gradient(circle at 12% 20%, rgba(24, 91, 72, .12), transparent 45%),
-    radial-gradient(circle at 88% 85%, rgba(197, 166, 106, .18), transparent 45%),
-    var(--bg-alt);
-}
-.sw-panel {
-  position: relative; isolation: isolate; overflow: hidden;
-  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 60px; align-items: center;
-  padding: 64px 60px; border-radius: 28px;
-  border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow-lg);
-}
-/* 2D: dashed stitch border and a slow light sheen */
-.sw-panel::before {
-  content: ''; position: absolute; inset: 12px; z-index: -1; pointer-events: none;
-  border: 1.5px dashed rgba(197, 166, 106, .45); border-radius: 20px;
-}
-.sw-panel::after {
-  content: ''; position: absolute; top: -40%; inset-inline-start: -30%; z-index: -1; pointer-events: none;
-  width: 40%; height: 180%;
-  background: linear-gradient(100deg, transparent, rgba(197, 166, 106, .14), transparent);
-  transform: translateX(-120%) rotate(12deg);
-  animation: sheen 9s ease-in-out infinite;
-}
-@keyframes sheen {
-  0%, 30% { transform: translateX(-120%) rotate(12deg); }
-  60%, 100% { transform: translateX(420%) rotate(12deg); }
-}
-
-.sw-copy p { color: var(--muted); }
-.sw-under { display: block; width: 180px; height: 14px; margin: -6px 0 22px; overflow: visible; }
-.sw-under path {
-  fill: none; stroke: var(--secondary); stroke-width: 2;
-  stroke-dasharray: 6 6; animation: lineFlow 6s linear infinite;
-}
-.sw-checks { display: grid; gap: 12px; margin: 26px 0 34px; }
-.sw-checks li { display: flex; align-items: center; gap: 12px; font-size: .95rem; }
-
-/* 3D swatch fan */
-.sw-visual { position: relative; perspective: 1100px; height: 380px; display: grid; place-items: center; }
-.sw-ring {
-  position: absolute; width: 320px; height: 320px; border-radius: 50%;
-  border: 1.5px dashed rgba(197, 166, 106, .5);
-  animation: spin 30s linear infinite;
-}
-.sw-fan {
-  position: relative; width: 230px; height: 290px;
-  transform-style: preserve-3d;
-  animation: fanSway 12s ease-in-out infinite alternate;
-}
-.sw-visual:hover .sw-fan { animation-play-state: paused; }
-@keyframes fanSway {
-  from { transform: rotateY(-16deg) rotateX(6deg); }
-  to   { transform: rotateY(16deg) rotateX(-4deg); }
-}
-.sw-card {
-  position: absolute; inset: 0; border-radius: 16px;
-  border: 2px solid var(--secondary);
-  background: linear-gradient(160deg, var(--c), var(--c2));
+/* ---------- 5. CTA BLOCK (primary background, directly above footer) ---------- */
+.gc-block {
+  position: relative; overflow: hidden; isolation: isolate;
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto 100px;
+  padding: 64px 60px;
+  border-radius: 26px;
+  background: linear-gradient(125deg, var(--primary) 0%, #0C211B 100%);
+  color: #fff;
   box-shadow: var(--shadow-lg);
-  transform-origin: 50% 100%;
-  transform: rotate(var(--r)) translateZ(calc(var(--k) * 12px));
-  transition: transform .9s var(--ease);
 }
-.sw-card::after {
-  content: ''; position: absolute; inset: 14px; border-radius: 10px;
-  border: 1px dashed rgba(255, 255, 255, .35);
+.gc-block::before {
+  content: ""; position: absolute; inset: 14px;
+  border: 1.5px dashed rgba(214, 187, 131, .55);
+  border-radius: 18px; pointer-events: none;
 }
-.sw-fan:hover .sw-card {
-  transform: rotate(calc(var(--r) * 1.7)) translateZ(calc(var(--k) * 30px));
+.gc-block::after {
+  content: ""; position: absolute; top: -180px; right: -140px;
+  width: 420px; height: 420px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(214, 187, 131, .28), transparent 70%);
 }
-.sw-label {
-  position: absolute; bottom: 4px; inset-inline: 0; margin: 0; text-align: center;
-  font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
-}
+[dir="rtl"] .gc-block::after { right: auto; left: -140px; }
 
-@keyframes lineFlow { to { stroke-dashoffset: -24px; } }
+.gc-inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: 56px; align-items: center;
+}
+.gc-kicker {
+  display: inline-block; margin-bottom: 14px;
+  font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: #D6BB83;
+}
+.gc-text h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.2;
+  color: #fff;
+}
+.gc-text p {
+  margin: 0 0 28px; max-width: 560px; line-height: 1.7;
+  color: rgba(255, 255, 255, .85);
+}
+.gc-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.gc-btn-dark {
+  background: #D6BB83; color: #0C211B; border: 2px solid #D6BB83;
+}
+.gc-btn-dark:hover {
+  background: #fff; border-color: #fff; color: #185B48;
+}
+.gc-btn-line {
+  background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, .55);
+}
+.gc-btn-line:hover {
+  background: #fff; color: #185B48; border-color: #fff;
+}
+.gc-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.gc-list li {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px; border-radius: 14px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .18);
+  font-weight: 500; color: #fff;
+}
+.gc-ic {
+  flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #D6BB83; color: #0C211B;
+}
 
 /* ---------- Footer ---------- */
 .site-footer { background: #ffffff; color: var(--text); border-top: 1px solid var(--line); }
@@ -648,12 +638,11 @@ button { font: inherit; cursor: pointer; }
   .guide-grid { grid-template-columns: 1fr; gap: 60px; }
   .lib-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .sw-panel { grid-template-columns: 1fr; gap: 40px; padding: 52px 36px; }
-  .sw-copy { text-align: center; }
-  .sw-under { margin-inline: auto; }
-  .sw-checks li { justify-content: center; }
-  .sw-copy .btn-row { justify-content: center; }
-  .sw-visual { height: 340px; }
+  .gc-block { padding: 48px 36px; }
+  .gc-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .gc-text p { margin-left: auto; margin-right: auto; }
+  .gc-actions { justify-content: center; }
+  .gc-list { max-width: 460px; width: 100%; }
 }
 
 @media (max-width: 620px) {
@@ -673,11 +662,14 @@ button { font: inherit; cursor: pointer; }
   .bottom-inner { justify-content: center; text-align: center; }
   .gh-facts { gap: 12px 20px; }
 
-  .sw-panel { padding: 40px 20px; border-radius: 20px; }
-  .sw-panel::before { inset: 8px; border-radius: 14px; }
-  .sw-visual { height: 300px; }
-  .sw-fan { width: 190px; height: 240px; }
-  .sw-ring { width: 260px; height: 260px; }
+  .gc-block {
+    margin: 0 auto 60px;
+    padding: 40px 22px;
+    border-radius: 18px;
+  }
+  .gc-actions { flex-direction: column; width: 100%; }
+  .gc-actions .btn { width: 100%; justify-content: center; }
+  .gc-list li { padding: 14px 16px; }
 }
 
 /* Touch devices: no hover, so show the hidden details */

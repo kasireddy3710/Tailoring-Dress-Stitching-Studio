@@ -1,4 +1,4 @@
-/* AUREL - Home 1 scripts */
+  /* AUREL - Home 1 scripts */
 (function () {
   'use strict';
 
@@ -19,6 +19,7 @@
     var next = root.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
     root.setAttribute('dir', next);
     try { localStorage.setItem('aurel-dir', next); } catch (e) {}
+    hsInit();
   });
 
   /* ---------- Mobile menu ---------- */
@@ -61,9 +62,59 @@
     if (heroBg && !reduceMotion) {
       heroBg.style.translate = '0 ' + (-Math.min(y, 900) * 0.16).toFixed(1) + 'px';
     }
+    hsUpdate();
   }
+
+  /* ---------- Horizontal scroll section ----------
+     Desktop: the section is made tall, the inner stage sticks to the top and the
+     card track slides sideways as you scroll down.
+     Mobile / reduced motion: falls back to a native swipeable row with snap. */
+  var hs = $('.hs'), hsSticky = hs && $('.hs-sticky', hs), hsViewport = hs && $('.hs-viewport', hs),
+      hsTrack = hs && $('.hs-track', hs), hsBar = hs && $('.hs-progress span', hs), hsDist = 0, hsOn = false;
+
+  function hsInit() {
+    if (!hs) return;
+    hsOn = window.innerWidth > 760 && !reduceMotion;
+    hs.classList.toggle('hs-on', hsOn);
+    if (!hsOn) {
+      hs.style.height = '';
+      hsTrack.style.transform = '';
+      hsBar.style.transform = '';
+      return;
+    }
+    hs.style.height = '';
+    hsDist = Math.max(0, hsTrack.scrollWidth - hsViewport.clientWidth);
+    hs.style.height = (hsSticky.offsetHeight + hsDist) + 'px';
+    hsUpdate();
+  }
+
+  function hsUpdate() {
+    if (!hsOn) return;
+    var rtl = root.getAttribute('dir') === 'rtl';
+    var stickTop = header.offsetHeight;
+    var total = hs.offsetHeight - hsSticky.offsetHeight;
+    var p = total > 0 ? (stickTop - hs.getBoundingClientRect().top) / total : 0;
+    p = Math.min(1, Math.max(0, p));
+    var x = p * hsDist * (rtl ? 1 : -1);
+    hsTrack.style.transform = 'translate3d(' + x.toFixed(1) + 'px,0,0)';
+    hsBar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', hsInit);
+  window.addEventListener('load', hsInit);
+  hsInit();
   onScroll();
+
+  /* ---------- Infinite marquee: clone each set once for a seamless loop ---------- */
+  $$('.mq-track').forEach(function (track) {
+    var set = track.firstElementChild;
+    if (!set) return;
+    var copy = set.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    $$('img', copy).forEach(function (img) { img.alt = ''; });
+    track.appendChild(copy);
+  });
 
   /* ---------- Scroll reveal ---------- */
   var io = new IntersectionObserver(function (entries) {

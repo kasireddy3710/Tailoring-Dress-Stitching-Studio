@@ -365,6 +365,23 @@ button { font: inherit; cursor: pointer; }
 .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; margin: 26px 0 34px; }
 .spec-grid li { display: flex; align-items: center; gap: 10px; font-size: .94rem; color: var(--text); }
 
+/* ---------- 2b. MARQUEE (infinite ticker) ---------- */
+.mq-band { background: var(--primary); border-block: 1px solid var(--secondary); }
+.mq { overflow: hidden; padding: 20px 0; }
+.mq-track {
+  display: flex; width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.mq:hover .mq-track { animation-play-state: paused; }
+.mq-group { display: flex; align-items: center; flex: none; }
+.mq-group span {
+  font-family: var(--font-display); font-size: clamp(1.3rem, 2.6vw, 2rem); font-weight: 600;
+  color: #fff; padding: 0 28px; white-space: nowrap; line-height: 1.2;
+}
+.mq-group i {
+  width: 10px; height: 10px; flex: none; background: var(--secondary); transform: rotate(45deg);
+}
+
 /* ---------- 3. PACKAGES ---------- */
 .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; perspective: 1200px; }
 .tier {
@@ -408,6 +425,52 @@ button { font: inherit; cursor: pointer; }
 .tier-foot .btn { width: 100%; }
 
 .packages-note { text-align: center; margin-top: 46px; color: var(--muted); }
+
+/* ---------- 3b. HORIZONTAL PROCESS (pinned, scrolls sideways) ---------- */
+.hz-wrap { position: relative; height: 320vh; background: var(--bg); }
+.hz-sticky {
+  position: sticky; top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  height: calc(100svh - var(--header-h));
+  min-height: 460px;
+  display: flex; flex-direction: column; justify-content: center; gap: 36px;
+  overflow: hidden;
+}
+.hz-top { text-align: center; }
+.hz-top .section-title { margin-bottom: .3em; }
+.hz-top p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+.hz-track {
+  display: flex; gap: 28px; align-items: stretch;
+  padding-inline-start: max(20px, calc((100% - var(--container)) / 2));
+  will-change: transform;
+}
+.hz-card {
+  position: relative; overflow: hidden;
+  flex: 0 0 min(380px, 80vw);
+  min-height: 340px; padding: 38px 34px;
+  display: flex; flex-direction: column; gap: 14px;
+  border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+  transition: border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.hz-card:hover { border-color: var(--secondary); box-shadow: var(--shadow-lg); }
+.hz-num {
+  display: block; font-family: var(--font-display); font-size: 3.2rem; line-height: 1;
+  color: transparent; -webkit-text-stroke: 1.2px var(--secondary); opacity: .85;
+}
+.hz-icon {
+  width: 56px; height: 56px; display: grid; place-items: center; flex: none;
+  border-radius: 50%; border: 2px solid var(--secondary);
+  background: var(--primary); color: var(--secondary);
+}
+.hz-card h3 { font-size: 1.6rem; margin: 6px 0 0; }
+.hz-card p { color: var(--muted); margin: 0; }
+.hz-progress { height: 2px; background: var(--line); margin-top: 0; }
+.hz-progress span {
+  display: block; height: 100%; width: 100%;
+  background: var(--secondary); transform-origin: left; transform: scaleX(0);
+}
+[dir="rtl"] .hz-progress span { transform-origin: right; }
 
 /* ---------- 4. FITTING GUIDE + FAQ ---------- */
 .guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
@@ -484,80 +547,51 @@ button { font: inherit; cursor: pointer; }
 .faq-a { padding: 0 4px 24px; color: var(--muted); transform-origin: top center; animation: faqIn .5s var(--ease); }
 .faq-a p { margin: 0; }
 
-/* ---------- 5. CTA: Measurement Card (directly above footer) ---------- */
-.fit-card {
-  position: relative; overflow: hidden;
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 60px; align-items: center;
-  padding: 64px 60px; border-radius: 26px;
-  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-lg);
+/* ---------- 5. CTA BLOCK (primary colour, one image, directly above footer) ---------- */
+.sv-cta {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 56px; align-items: center;
+  margin: 0 auto 100px;
+  padding: 56px 60px;
+  border-radius: 26px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
 }
-/* 2D: dashed stitch line inset from the card edge */
-.fit-card::before {
-  content: ''; position: absolute; inset: 12px; pointer-events: none;
-  border: 1.5px dashed rgba(197, 166, 106, .45); border-radius: 18px;
+.sv-cta::before {
+  content: ""; position: absolute; inset: 14px;
+  border: 1.5px dashed rgba(214, 187, 131, .55);
+  border-radius: 18px; pointer-events: none;
 }
-.fit-card::after {
-  content: ''; position: absolute; inset-inline-start: -30%; top: 0; width: 30%; height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(197, 166, 106, .12), transparent);
-  transform: skewX(-12deg); pointer-events: none;
-  animation: fitSheen 8s ease-in-out infinite;
+.sv-cta-media {
+  position: relative; z-index: 1;
+  aspect-ratio: 4 / 5; overflow: hidden;
+  border-radius: 18px; border: 2px solid var(--secondary);
+  box-shadow: 0 25px 40px -20px rgba(0, 0, 0, .6);
 }
-.fit-copy, .fit-visual { position: relative; z-index: 1; }
-.fit-copy h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); margin-bottom: .4em; }
-.fit-copy > p { color: var(--muted); }
-.fit-points { margin: 24px 0 32px; display: grid; gap: 12px; }
-.fit-points li { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: var(--text); }
-
-.fit-visual { height: 340px; }
-.df-stage { position: absolute; inset: 0; perspective: 900px; }
-
-/* Rotating 3D dress form made of stacked rings */
-.df-form {
-  position: absolute; inset: 0;
-  transform-style: preserve-3d;
-  transform: rotateX(-14deg);
-  animation: dfSpin 18s linear infinite;
+.sv-cta-media img { width: 100%; height: 100%; object-fit: cover; background: transparent; }
+.sv-cta-text { position: relative; z-index: 1; }
+.sv-cta-kicker {
+  display: inline-block; margin-bottom: 14px;
+  font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+  color: #D6BB83;
 }
-.fit-visual:hover .df-form { animation-play-state: paused; }
-
-.df-ring {
-  position: absolute; left: 40%;
-  top: var(--y);
-  width: var(--d); height: var(--d);
-  margin: calc(var(--d) / -2) 0 0 calc(var(--d) / -2);
-  border-radius: 50%;
-  border: 1.5px solid var(--secondary);
-  background: rgba(197, 166, 106, .06);
-  transform: rotateX(90deg);
+.sv-cta h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.2;
+  color: #fff;
 }
-.df-ring.base { background: rgba(24, 91, 72, .16); }
-
-/* Measurement markers (2D, fixed to the stage) */
-.df-line {
-  position: absolute; inset-inline: 0; top: var(--y);
-  border-top: 1px dashed rgba(197, 166, 106, .5);
-  transform: scaleX(0);
-  animation: dfLine .9s var(--ease) both;
-  animation-delay: calc(var(--i, 0) * .14s + .3s);
+.sv-cta p {
+  margin: 0 0 28px; max-width: 540px; line-height: 1.7;
+  color: rgba(255, 255, 255, .85);
 }
-.df-tag {
-  position: absolute; inset-inline-end: 0; top: var(--y);
-  transform: translateY(-50%);
-  display: flex; flex-direction: column; line-height: 1.2;
-  padding: 8px 14px; border-radius: 12px;
-  background: var(--primary); color: var(--on-primary);
-  border: 1px solid var(--secondary);
-  box-shadow: var(--shadow);
-  animation: tagIn .7s var(--ease) both;
-  animation-delay: calc(var(--i, 0) * .14s + .4s);
-}
-.df-tag small { font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--secondary); }
-.df-tag b { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
-
-/* Hold the measurement markers until the card scrolls into view */
-.fit-visual:not(.in) .df-line,
-.fit-visual:not(.in) .df-tag { animation-play-state: paused; }
+.sv-cta-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.sv-btn-gold { background: #D6BB83; color: #0C211B; border: 2px solid #D6BB83; }
+.sv-btn-gold:hover { background: #fff; border-color: #fff; color: #185B48; }
+.sv-btn-line { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, .55); }
+.sv-btn-line:hover { background: #fff; color: #185B48; border-color: #fff; }
 
 /* ---------- Footer (matches header) ---------- */
 .site-footer { background: #ffffff; color: var(--text); border-top: 1px solid var(--line); }
@@ -593,6 +627,7 @@ button { font: inherit; cursor: pointer; }
 .legal a { color: var(--text); transition: color .3s; }
 .legal a:hover { color: var(--primary); }
 [data-theme="dark"] .legal a:hover { color: var(--secondary); }
+
 /* ---------- Scroll reveal (2D + 3D) ---------- */
 .reveal { opacity: 0; transform: perspective(900px) translateY(50px) rotateX(14deg); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * .12s); }
 .reveal-left { transform: perspective(900px) translateX(-70px) rotateY(14deg); }
@@ -621,19 +656,7 @@ button { font: inherit; cursor: pointer; }
 @keyframes pulseRing { from { transform: scale(.7); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 @keyframes panelIn { from { opacity: 0; transform: perspective(800px) rotateX(-8deg) translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes faqIn { from { opacity: 0; transform: perspective(700px) rotateX(-10deg) translateY(-6px); } to { opacity: 1; transform: none; } }
-@keyframes dfSpin {
-  from { transform: rotateX(-14deg) rotateY(0deg); }
-  to   { transform: rotateX(-14deg) rotateY(360deg); }
-}
-@keyframes dfLine { to { transform: scaleX(1); } }
-@keyframes tagIn {
-  from { opacity: 0; transform: translateY(calc(-50% + 10px)); }
-  to   { opacity: 1; transform: translateY(-50%); }
-}
-@keyframes fitSheen {
-  0%, 60%  { inset-inline-start: -30%; }
-  100%     { inset-inline-start: 130%; }
-}
+@keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
@@ -676,8 +699,8 @@ button { font: inherit; cursor: pointer; }
   .guide-grid { grid-template-columns: 1fr; gap: 50px; }
   .faq { margin-top: 80px; }
 
-  .fit-card { grid-template-columns: 1fr; gap: 40px; padding: 52px 36px; }
-  .fit-visual { height: 340px; }
+  .sv-cta { grid-template-columns: 1fr; gap: 40px; padding: 48px 36px; }
+  .sv-cta-media { aspect-ratio: 16 / 10; }
 }
 
 @media (max-width: 620px) {
@@ -696,6 +719,10 @@ button { font: inherit; cursor: pointer; }
   .svc-no { font-size: 4.5rem; }
   .faq-item summary { font-size: 1.05rem; }
 
+  .hz-sticky { gap: 24px; }
+  .hz-card { flex-basis: 78vw; min-height: 300px; padding: 30px 26px; }
+  .mq-group span { padding: 0 18px; }
+
   .site-footer .footer-grid { grid-template-columns: 1fr; gap: 40px; padding: 56px 0 40px; }
   .site-footer .logo-img { width: 40px; height: 40px; }
   .site-footer .brand { gap: 14px; }
@@ -704,12 +731,10 @@ button { font: inherit; cursor: pointer; }
   .site-footer .f-bottom-inner { flex-direction: column; align-items: flex-start; padding-block: 20px; }
   .site-footer .f-bottom-end { width: 100%; justify-content: space-between; }
 
-  .fit-card { padding: 40px 20px; border-radius: 20px; }
-  .fit-card::before { inset: 8px; border-radius: 14px; }
-  .fit-visual { height: 280px; }
-  .df-stage { transform: scale(.78); transform-origin: top center; }
-  .df-tag { padding: 6px 10px; }
-  .df-tag small { display: none; }
+  .sv-cta { padding: 40px 22px; border-radius: 18px; margin-bottom: 60px; }
+  .sv-cta::before { inset: 8px; border-radius: 14px; }
+  .sv-cta-actions { flex-direction: column; width: 100%; }
+  .sv-cta-actions .btn { width: 100%; justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -719,4 +744,10 @@ button { font: inherit; cursor: pointer; }
   .gl-line { stroke-dashoffset: 0; }
   .under path { stroke-dashoffset: 0; }
   .site-footer .f-rise { opacity: 1; transform: none; }
+
+  /* Horizontal section falls back to a normal, natively scrollable strip */
+  .hz-wrap { height: auto; }
+  .hz-sticky { position: relative; top: auto; height: auto; min-height: 0; overflow: visible; padding-block: 80px; }
+  .hz-track { overflow-x: auto; transform: none !important; padding-bottom: 12px; }
+  .hz-progress { display: none; }
 }

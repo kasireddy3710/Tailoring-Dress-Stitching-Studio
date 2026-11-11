@@ -1,4 +1,4 @@
-/* AUREL - Home 2 scripts (Bridal & Occasion) */
+ /* AUREL - Home 2 scripts (Bridal & Occasion) */
 (function () {
   'use strict';
 
@@ -121,6 +121,14 @@
   /* ---------- Lookbook: tap to flip on touch ---------- */
   $$('.look').forEach(function (card) {
     card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+
+  /* ---------- Before & After sliders (mouse, touch and keyboard via the range input) ---------- */
+  $$('.ba').forEach(function (ba) {
+    var range = $('.ba-range', ba);
+    function setPos() { ba.style.setProperty('--pos', range.value + '%'); }
+    range.addEventListener('input', setPos);
+    setPos();
   });
 
   /* ---------- Footer year ---------- */
