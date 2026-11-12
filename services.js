@@ -1,4 +1,4 @@
-/* AUREL - Services page scripts */
+ /* AUREL - Services page scripts */
 (function () {
   'use strict';
 
@@ -48,6 +48,73 @@
       nav.classList.remove('open');
       menuBtn.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  /* ---------- Service preview PAGE (eye button -> full-page template) ---------- */
+  var pv = $('#svcPreview');
+  var pvImg = $('#pvImg'), pvEyebrow = $('#pvEyebrow'), pvTitle = $('#pvTitle'),
+      pvText = $('#pvText'), pvSpecs = $('#pvSpecs'), pvCount = $('#pvCount'),
+      pvPrevName = $('#pvPrevName'), pvNextName = $('#pvNextName');
+  var svcRows = $$('.svc-row');
+  var pvIndex = 0, pvTrigger = null;
+
+  function svcName(i) { return $('.eyebrow', svcRows[i]).textContent; }
+
+  /* Fills the preview page from the service block at index i (content is read from the page itself) */
+  function pvFill(i) {
+    var n = svcRows.length;
+    pvIndex = (i + n) % n;
+    var row = svcRows[pvIndex];
+    var img = $('.svc-frame img', row);
+    var copy = $('.svc-copy', row);
+
+    pvImg.src = img.src;
+    pvImg.alt = img.alt;
+    pvEyebrow.textContent = svcName(pvIndex);
+    pvTitle.textContent = $('h3', copy).textContent;
+    pvText.textContent = $('p', copy).textContent;
+
+    pvSpecs.innerHTML = '';
+    $$('.spec-grid li', copy).forEach(function (li) { pvSpecs.appendChild(li.cloneNode(true)); });
+
+    pvCount.textContent = pad(pvIndex + 1) + ' / ' + pad(n);
+    pvPrevName.textContent = svcName((pvIndex - 1 + n) % n);
+    pvNextName.textContent = svcName((pvIndex + 1) % n);
+    pv.scrollTop = 0;
+  }
+
+  function pvOpen(i, trigger) {
+    pvTrigger = trigger || null;
+    pvFill(i);
+    if (typeof pv.showModal === 'function') { pv.showModal(); }
+    else { pv.setAttribute('open', ''); }
+  }
+
+  function pvClose() {
+    if (typeof pv.close === 'function') { pv.close(); }
+    else { pv.removeAttribute('open'); }
+  }
+
+  pv.addEventListener('close', function () {
+    if (pvTrigger) { pvTrigger.focus(); pvTrigger = null; }
+  });
+
+  $$('.eye-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      pvOpen(svcRows.indexOf(btn.closest('.svc-row')), btn);
+    });
+  });
+
+  $$('[data-pv-close]', pv).forEach(function (b) { b.addEventListener('click', pvClose); });
+  $('[data-pv-prev]', pv).addEventListener('click', function () { pvFill(pvIndex - 1); });
+  $('[data-pv-next]', pv).addEventListener('click', function () { pvFill(pvIndex + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (!pv.open) return;
+    var rtl = root.getAttribute('dir') === 'rtl';
+    if (e.key === 'ArrowRight') pvFill(pvIndex + (rtl ? -1 : 1));
+    else if (e.key === 'ArrowLeft') pvFill(pvIndex + (rtl ? 1 : -1));
   });
 
   /* ---------- Horizontal pinned process (scrolls sideways with vertical scroll) ---------- */
