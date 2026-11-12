@@ -1,269 +1,706 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book Measurement | AUREL Tailoring &amp; Dress Stitching Studio</title>
-<meta name="description" content="Reserve a measurement slot at the AUREL studio. Timeless &amp; classic tailoring.">
-<meta name="color-scheme" content="light dark">
-<script>
-(function(){try{var t=localStorage.getItem('aurel-theme'),d=localStorage.getItem('aurel-dir');
-if(t)document.documentElement.setAttribute('data-theme',t);
-if(d)document.documentElement.setAttribute('dir',d);}catch(e){}})();
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --font-display:'Playfair Display',Georgia,serif;
-  --font-body:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --primary:#185B48;--secondary:#C5A66A;--on-primary:#fff;--on-secondary:#10241d;
-  --bg:#fff;--bg-alt:#f5f2eb;--surface:#fff;--text:#1c2a25;--muted:#5d6b65;
-  --line:rgba(24,91,72,.16);--shadow:0 18px 40px -18px rgba(12,33,27,.35);--shadow-lg:0 30px 60px -20px rgba(12,33,27,.45);
-  --radius:14px;--header-h:85px;--ease:cubic-bezier(.2,.7,.2,1);
-}
-[data-theme="dark"]{
-  --primary:#0C211B;--secondary:#D6BB83;--on-primary:#f4efe3;--on-secondary:#0C211B;
-  --bg:#08130f;--bg-alt:#112019;--surface:#172721;--text:#ecf1ee;--muted:#a7b6af;
-  --line:rgba(214,187,131,.22);--shadow:0 18px 40px -18px rgba(0,0,0,.7);--shadow-lg:0 30px 60px -20px rgba(0,0,0,.8);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg-alt);overflow-x:clip;transition:background .4s var(--ease),color .4s var(--ease)}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--font-display);line-height:1.2;margin:0 0 .5em;font-weight:600}
-p{margin:0 0 1em}
-button,input,select,textarea{font:inherit}
-:focus-visible{outline:2px solid var(--secondary);outline-offset:3px}
-.container{width:min(100% - 40px,1200px);margin-inline:auto}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Measurement | AUREL Tailoring &amp; Dress Stitching Studio</title>
+  <meta name="description" content="Book a hand measurement appointment at AUREL. Blouses, suits, kids wear and alterations, stitched with care.">
+  <meta name="color-scheme" content="light dark">
 
-/* Header: logo + toggles only, no nav links */
-.site-header{position:sticky;top:0;z-index:100;height:var(--header-h);background:#fff;border-bottom:1px solid var(--line)}
-[data-theme="dark"] .site-header{background:#12241e}
-.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
-.brand{display:inline-flex;align-items:center;gap:19px}
-.logo-img{width:53px;height:53px;object-fit:contain;transition:transform .6s var(--ease)}
-.brand:hover .logo-img{transform:rotateY(360deg)}
-.logo-dark{display:none}
-[data-theme="dark"] .logo-light{display:none}
-[data-theme="dark"] .logo-dark{display:block}
-.brand-text{display:flex;flex-direction:column;line-height:1.1}
-.brand-name{font-family:var(--font-display);font-size:1.55rem;font-weight:700;letter-spacing:.14em}
-.brand-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.header-actions{display:flex;align-items:center;gap:12px}
-.icon-btn{width:42px;height:42px;display:grid;place-items:center;background:transparent;color:var(--text);border:2px solid var(--line);border-radius:50%;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),transform .4s var(--ease)}
-.icon-btn:hover{background:var(--secondary);color:var(--on-secondary);transform:rotate(180deg)}
-.i-sun{display:none}
-[data-theme="dark"] .i-sun{display:block}
-[data-theme="dark"] .i-moon{display:none}
+  <!-- Logo icon (favicon / app icon) -->
+  <link rel="icon" type="image/png" href="/4db8457e-b27e-4777-99eb-f86f3e451edc.png">
+  <link rel="apple-touch-icon" href="/4db8457e-b27e-4777-99eb-f86f3e451edc.png">
 
-/* Page */
-.page{position:relative;padding:72px 0 96px;overflow:hidden;isolation:isolate}
-.page::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 15% 10%,rgba(197,166,106,.16),transparent 45%),radial-gradient(circle at 90% 90%,rgba(24,91,72,.12),transparent 50%)}
-.grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:center}
-.eyebrow{display:inline-block;font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:#8a6d33;margin-bottom:14px;position:relative;padding-inline:34px}
-[data-theme="dark"] .eyebrow{color:var(--secondary)}
-.eyebrow::before,.eyebrow::after{content:'';position:absolute;top:50%;width:24px;height:1px;background:currentColor}
-.eyebrow::before{inset-inline-start:0}.eyebrow::after{inset-inline-end:0}
-.title{font-size:clamp(2.1rem,4vw,3.3rem)}
-.intro{color:var(--muted);max-width:460px}
-.facts{display:grid;gap:12px;margin:28px 0 0}
-.facts li{display:flex;align-items:center;gap:12px;font-size:.94rem}
-.facts svg{color:var(--secondary);flex:none;padding:3px;border:1.5px solid var(--secondary);border-radius:50%;width:26px;height:26px}
-ul{margin:0;padding:0;list-style:none}
+  <!-- Apply saved theme / direction before paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aurel-theme');
+        var d = localStorage.getItem('aurel-dir');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
 
-/* Animation 1: arched photo frame reveal + orbiting gold ring */
-.visual{position:relative;isolation:isolate;width:min(100%,380px);margin:50px auto 0;perspective:1000px}
-.ring{position:absolute;z-index:-1;width:114%;aspect-ratio:1;top:50%;inset-inline-start:50%;translate:-50% -50%;border-radius:50%;border:1.5px dashed rgba(197,166,106,.7);animation:spin 28s linear infinite}
-.ring::before{content:'';position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--secondary);box-shadow:0 0 16px var(--secondary)}
-.frame{margin:0;padding:10px;border:2px solid var(--secondary);border-radius:200px 200px 24px 24px;background:var(--surface);box-shadow:var(--shadow-lg);animation:archIn 1.5s var(--ease) .1s both}
-.frame .media{overflow:hidden;aspect-ratio:4/5;border-radius:190px 190px 16px 16px;background:var(--bg-alt)}
-.frame img{width:100%;height:100%;object-fit:cover}
-.badge{position:absolute;bottom:-24px;inset-inline-start:-20px;width:98px;height:98px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.1;background:var(--primary);color:var(--on-primary);border:2px solid var(--secondary);box-shadow:var(--shadow)}
-.badge span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--secondary)}
-.badge strong{font-family:var(--font-display);font-size:1.5rem}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-/* Form card */
-.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:56px 40px 40px;overflow:hidden}
-/* Animation 2: moving measuring tape along the card top */
-.tape{position:absolute;top:0;inset-inline:0;height:16px;background:var(--primary);border-bottom:2px solid var(--secondary);overflow:hidden}
-.tape::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(to right,var(--secondary) 0 1.5px,transparent 1.5px 12px) 0 100%/100% 7px no-repeat,repeating-linear-gradient(to right,var(--secondary) 0 1.5px,transparent 1.5px 60px) 0 100%/100% 12px no-repeat;animation:tape 6s linear infinite}
-.card h2{font-size:1.9rem}
-.card .sub{color:var(--muted);font-size:.93rem;margin-bottom:28px}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.field{display:flex;flex-direction:column;gap:6px}
-.field.full{grid-column:1/-1}
-label{font-size:.82rem;font-weight:500;letter-spacing:.04em}
-input,select,textarea{width:100%;padding:12px 14px;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;transition:border-color .3s,box-shadow .3s}
-textarea{resize:vertical;min-height:96px}
-input:focus,select:focus,textarea:focus{outline:0;border-color:var(--secondary);box-shadow:0 0 0 3px rgba(197,166,106,.25)}
-.invalid{border-color:#b3412f}
-.slots{display:flex;flex-wrap:wrap;gap:10px}
-.slot{position:relative}
-.slot input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
-.slot span{display:block;padding:8px 16px;border:1.5px solid var(--line);border-radius:999px;font-size:.85rem;transition:all .3s var(--ease)}
-.slot input:checked+span{background:var(--primary);color:var(--on-primary);border-color:var(--secondary)}
-.slot input:focus-visible+span{outline:2px solid var(--secondary);outline-offset:3px}
+  <style>
+    /* ---------- Design tokens (same as AUREL home) ---------- */
+    :root {
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-/* Button + Animation 3: gold shine sweep */
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:26px;padding:14px 28px;border-radius:999px;border:2px solid var(--secondary);background:var(--primary);color:var(--on-primary);font-weight:500;letter-spacing:.02em;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
-.btn:hover{background:var(--secondary);color:var(--on-secondary);transform:translateY(-3px);box-shadow:0 14px 26px -12px rgba(0,0,0,.45)}
-.btn::after{content:'';position:absolute;top:-10%;bottom:-10%;left:0;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-160%) skewX(-18deg);animation:shine 4.5s ease-in-out 1.5s infinite}
-.note{font-size:.8rem;color:var(--muted);text-align:center;margin:14px 0 0}
-.success{display:none;text-align:center;padding:30px 0}
-.success.show{display:block}
-.success .tick{width:72px;height:72px;margin:0 auto 18px;display:grid;place-items:center;border-radius:50%;background:var(--primary);color:var(--secondary);border:2px solid var(--secondary)}
-form.hide{display:none}
+      --primary: #185B48;
+      --secondary: #C5A66A;
+      --on-primary: #ffffff;
+      --on-secondary: #10241d;
 
-@keyframes archIn{from{clip-path:inset(100% -40px -40px -40px)}to{clip-path:inset(-40px)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes tape{to{background-position:-60px 100%}}
-@keyframes shine{0%,35%{transform:translateX(-160%) skewX(-18deg)}70%,100%{transform:translateX(480%) skewX(-18deg)}}
+      --bg: #ffffff;
+      --bg-alt: #f5f2eb;
+      --surface: #ffffff;
+      --text: #1c2a25;
+      --muted: #5d6b65;
+      --line: rgba(24, 91, 72, .16);
+      --field: #faf8f3;
+      --danger: #b3382c;
+      --shadow: 0 18px 40px -18px rgba(12, 33, 27, .35);
+      --shadow-lg: 0 30px 60px -20px rgba(12, 33, 27, .45);
 
-[dir="rtl"] .tape::before{animation-direction:reverse}
+      --radius: 14px;
+      --container: 1200px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
 
-.site-footer{background:#fff;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
-[data-theme="dark"] .site-footer{background:#12241e}
-.site-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:20px 0}
-.site-footer p{margin:0}
+    [data-theme="dark"] {
+      --primary: #0C211B;
+      --secondary: #D6BB83;
+      --on-primary: #f4efe3;
+      --on-secondary: #0C211B;
 
-@media(max-width:960px){.grid{grid-template-columns:1fr;gap:56px}.intro{max-width:none}.visual{width:min(100%,300px)}}
-@media(max-width:620px){.page{padding:48px 0 72px}.card{padding:50px 22px 28px}.fields{grid-template-columns:1fr}.brand-tag{font-size:.58rem;letter-spacing:.08em}.logo-img{width:40px;height:40px}.brand-name{font-size:1.3rem}.icon-btn{width:36px;height:36px}.site-footer .container{justify-content:center;text-align:center}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
-</style>
+      --bg: #08130f;
+      --bg-alt: #112019;
+      --surface: #172721;
+      --text: #ecf1ee;
+      --muted: #a7b6af;
+      --line: rgba(214, 187, 131, .22);
+      --field: #11201a;
+      --danger: #ef8a7d;
+      --shadow: 0 18px 40px -18px rgba(0, 0, 0, .7);
+      --shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, .8);
+    }
+
+    /* ---------- Reset ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+      font-family: var(--font-body); font-size: 16px; line-height: 1.7;
+      color: var(--text); background: var(--bg-alt);
+      overflow-x: clip;
+      transition: background .4s var(--ease), color .4s var(--ease);
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0 0 .5em; font-weight: 600; }
+    p { margin: 0 0 1em; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--secondary); outline-offset: 3px; }
+    .container { width: min(100% - 40px, var(--container)); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    .skip-link {
+      position: absolute; inset-inline-start: 12px; top: -60px; z-index: 200;
+      background: var(--secondary); color: var(--on-secondary); padding: 10px 16px; border-radius: 8px;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 30px; border-radius: 999px; border: 2px solid var(--secondary);
+      font-weight: 500; font-size: .95rem; letter-spacing: .02em; white-space: nowrap;
+      transition: background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .btn:hover { transform: translateY(-3px) perspective(400px) rotateX(6deg); box-shadow: 0 14px 26px -12px rgba(0,0,0,.45); }
+    .btn:active { transform: translateY(0); }
+    .btn-primary { background: var(--primary); color: var(--on-primary); }
+    .btn-primary:hover { background: var(--secondary); color: var(--on-secondary); }
+    .btn-secondary { background: transparent; color: var(--text); }
+    .btn-secondary:hover { background: var(--secondary); color: var(--on-secondary); }
+    .btn[disabled] { opacity: .6; pointer-events: none; }
+
+    /* ---------- Page ---------- */
+    .page { flex: 1; display: grid; place-items: center; padding: 56px 0 64px; position: relative; isolation: isolate; }
+    .page::before {
+      content: ''; position: absolute; inset: 0; z-index: -1;
+      background:
+        radial-gradient(circle at 8% 10%, rgba(197, 166, 106, .16), transparent 42%),
+        radial-gradient(circle at 96% 92%, rgba(24, 91, 72, .12), transparent 45%);
+    }
+
+    .panel {
+      display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      background: var(--surface); border: 1px solid var(--secondary);
+      border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-lg);
+      animation: rise .9s var(--ease) both;
+    }
+
+    /* ---------- Left: brand panel ---------- */
+    .brand-panel {
+      position: relative; isolation: isolate; overflow: hidden;
+      padding: 56px 48px; color: #fff; background: var(--primary);
+      display: flex; flex-direction: column;
+    }
+    .brand-panel::before {
+      content: ''; position: absolute; z-index: -1; inset: 0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(214, 187, 131, .2), transparent 46%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, .035) 0 2px, transparent 2px 18px);
+    }
+    .brand-panel::after {
+      content: ''; position: absolute; z-index: -1; width: 420px; aspect-ratio: 1; border-radius: 50%;
+      inset-inline-end: -170px; bottom: -170px; border: 1.5px dashed rgba(214, 187, 131, .45);
+      animation: spin 40s linear infinite;
+    }
+
+    /* Logo + logo icon */
+    .brand { display: inline-flex; align-items: center; gap: 18px; align-self: flex-start; }
+    .logo-img { width: 64px; height: 64px; object-fit: contain; flex: none; transition: transform .7s var(--ease); }
+    .brand:hover .logo-img { transform: rotateY(360deg); }
+    .logo-dark { display: none; }
+    /* The brand panel is always dark green, so the dark-mode (light-toned) logo is used on it in both themes */
+    .brand-panel .logo-light { display: none; }
+    .brand-panel .logo-dark { display: block; }
+    .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; letter-spacing: .16em; color: #fff; }
+    .brand-tag { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--secondary); margin-top: 5px; }
+
+    .eyebrow {
+      display: inline-block; font-size: .78rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: .22em; color: var(--secondary); margin: 44px 0 14px; position: relative;
+    }
+    .brand-panel h1 { font-size: clamp(2rem, 3.4vw, 2.9rem); color: #fff; }
+    .brand-panel h1 em { color: #e6cf97; font-style: italic; }
+    .brand-panel .lead { color: rgba(255, 255, 255, .84); font-size: .98rem; max-width: 440px; }
+
+    .perks { display: grid; gap: 14px; margin: 18px 0 34px; }
+    .perks li { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: rgba(255, 255, 255, .92); }
+    .perks svg, .info-list svg { flex: none; color: var(--secondary); }
+    .perks svg { padding: 3px; border: 1.5px solid var(--secondary); border-radius: 50%; width: 26px; height: 26px; }
+
+    /* Framed photo inside the brand panel */
+    .bp-photo { position: relative; width: min(100%, 340px); margin: 6px auto 34px; padding-bottom: 14px; }
+    .bp-ring {
+      position: absolute; z-index: -1; top: 50%; inset-inline-start: 50%; translate: -50% -50%;
+      width: 112%; aspect-ratio: 1; border-radius: 50%;
+      border: 1.5px dashed rgba(214, 187, 131, .5); animation: spin 32s linear infinite;
+    }
+    .bp-frame {
+      position: relative; margin: 0; padding: 9px;
+      border: 2px solid var(--secondary); border-radius: 170px 170px 20px 20px;
+      background: rgba(255, 255, 255, .06);
+      box-shadow: 0 30px 55px -24px rgba(0, 0, 0, .75);
+    }
+    .bp-media { position: relative; overflow: hidden; aspect-ratio: 4 / 4.4; border-radius: 160px 160px 12px 12px; background: rgba(255, 255, 255, .06); }
+    .bp-media img { width: 100%; height: 100%; object-fit: cover; animation: kenburns 18s ease-in-out infinite alternate; }
+    .bp-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 60%, rgba(6, 18, 14, .45)); }
+    .bp-chip {
+      position: absolute; z-index: 2; bottom: 0; inset-inline-end: -14px; padding: 8px 16px; border-radius: 999px;
+      font-size: .76rem; font-weight: 500; white-space: nowrap;
+      background: var(--secondary); color: var(--on-secondary);
+      box-shadow: 0 14px 28px -12px rgba(0, 0, 0, .6); animation: floaty 6s ease-in-out infinite;
+    }
+    .bp-badge {
+      position: absolute; z-index: 2; top: 22%; inset-inline-start: -16px; width: 84px; height: 84px; border-radius: 50%;
+      display: grid; place-content: center; text-align: center; line-height: 1.1;
+      background: var(--primary); color: #fff; border: 2px solid var(--secondary);
+      box-shadow: 0 18px 36px -16px rgba(0, 0, 0, .7); animation: floaty 7s ease-in-out infinite;
+    }
+    .bp-badge span { font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--secondary); }
+    .bp-badge strong { font-family: var(--font-display); font-size: 1.3rem; }
+
+    .info-list { margin-top: auto; padding-top: 26px; border-top: 1px solid rgba(214, 187, 131, .3); display: grid; gap: 12px; font-size: .92rem; color: rgba(255, 255, 255, .86); }
+    .info-list li { display: flex; align-items: flex-start; gap: 12px; }
+    .info-list svg { margin-top: 4px; }
+    .info-list a:hover { color: var(--secondary); }
+
+    /* ---------- Right: form ---------- */
+    .form-panel { padding: 56px 52px; position: relative; }
+    .form-head { margin-bottom: 30px; }
+    .form-head .eyebrow { margin: 0 0 10px; }
+    [data-theme="light"] .form-head .eyebrow { color: #8a6d33; }
+    .form-head h2 { font-size: clamp(1.7rem, 2.8vw, 2.2rem); margin-bottom: .3em; }
+    .form-head p { color: var(--muted); font-size: .94rem; margin: 0; }
+
+    .stepper { display: flex; gap: 8px; margin: 0 0 30px; }
+    .stepper span { flex: 1; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; position: relative; }
+    .stepper span::after { content: ''; position: absolute; inset: 0; background: var(--secondary); transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease); }
+    .stepper span.on::after { transform: scaleX(1); }
+    [dir="rtl"] .stepper span::after { transform-origin: right; }
+
+    fieldset { border: 0; margin: 0 0 28px; padding: 0; min-width: 0; }
+    legend, .label {
+      display: block; padding: 0; margin-bottom: 10px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--text);
+    }
+    legend i, .label i { color: var(--secondary); font-style: normal; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field { margin-bottom: 18px; }
+    .input {
+      width: 100%; padding: 13px 16px; background: var(--field);
+      border: 1.5px solid var(--line); border-radius: 12px; font-size: .95rem;
+      transition: border-color .3s var(--ease), box-shadow .3s var(--ease), background .3s;
+    }
+    .input::placeholder { color: var(--muted); opacity: .75; }
+    .input:hover { border-color: rgba(197, 166, 106, .6); }
+    .input:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 4px rgba(197, 166, 106, .22); }
+    textarea.input { resize: vertical; min-height: 96px; }
+    select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23C5A66A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-inline-end: 42px; }
+    [dir="rtl"] select.input { background-position: left 16px center; }
+    .input[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 0 0 4px rgba(179, 56, 44, .12); }
+    .err { display: none; margin: 6px 2px 0; font-size: .8rem; color: var(--danger); }
+    .field.invalid .err, fieldset.invalid .err { display: block; }
+
+    /* Selectable chips (services, visit type, time) */
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { position: relative; }
+    .chip input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+    .chip span {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
+      background: var(--field); border: 1.5px solid var(--line); font-size: .88rem; font-weight: 500;
+      transition: all .3s var(--ease); user-select: none;
+    }
+    .chip:hover span { border-color: var(--secondary); transform: translateY(-2px); }
+    .chip input:checked + span { background: var(--primary); color: var(--on-primary); border-color: var(--secondary); box-shadow: 0 10px 22px -12px rgba(12, 33, 27, .7); }
+    [data-theme="dark"] .chip input:checked + span { background: var(--secondary); color: var(--on-secondary); }
+    .chip input:focus-visible + span { outline: 2px solid var(--secondary); outline-offset: 3px; }
+    .chip input:disabled + span { opacity: .4; text-decoration: line-through; cursor: not-allowed; transform: none; border-color: var(--line); }
+    .chip input:disabled { cursor: not-allowed; }
+    .slot-note { font-size: .82rem; color: var(--muted); margin: 10px 0 0; }
+
+    .visit { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .visit .chip span { width: 100%; justify-content: center; border-radius: 12px; padding: 13px 16px; }
+    .visit .chip { display: block; }
+
+    .stepper-qty { display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; background: var(--field); overflow: hidden; }
+    .stepper-qty button { width: 42px; height: 42px; border: 0; background: transparent; font-size: 1.2rem; color: var(--text); transition: background .25s, color .25s; }
+    .stepper-qty button:hover { background: var(--secondary); color: var(--on-secondary); }
+    .stepper-qty output { min-width: 40px; text-align: center; font-weight: 600; }
+
+    .consent { display: flex; gap: 12px; align-items: flex-start; font-size: .85rem; color: var(--muted); margin-bottom: 26px; }
+    .consent input { accent-color: var(--primary); width: 18px; height: 18px; margin-top: 4px; flex: none; }
+    .consent a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    [data-theme="dark"] .consent a { color: var(--secondary); }
+
+    .submit-row { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+    .submit-row small { color: var(--muted); font-size: .82rem; }
+
+    /* ---------- Success state ---------- */
+    .success { display: none; text-align: center; padding: 24px 0; }
+    .form-panel.done .success { display: block; animation: rise .8s var(--ease) both; }
+    .form-panel.done form, .form-panel.done .form-head, .form-panel.done .stepper { display: none; }
+    .seal {
+      width: 96px; height: 96px; margin: 0 auto 22px; display: grid; place-items: center; border-radius: 50%;
+      background: var(--primary); color: var(--secondary); border: 2px solid var(--secondary);
+      box-shadow: 0 0 0 8px rgba(197, 166, 106, .15);
+    }
+    .seal path { stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw .8s var(--ease) .3s forwards; }
+    .success h2 { font-size: 2rem; }
+    .success > p { color: var(--muted); max-width: 440px; margin-inline: auto; }
+    .ref { display: inline-block; margin: 6px 0 24px; padding: 8px 20px; border: 1.5px dashed var(--secondary); border-radius: 999px; font-weight: 600; letter-spacing: .12em; }
+    .summary { text-align: start; max-width: 420px; margin: 0 auto 28px; padding: 20px 24px; background: var(--field); border: 1px solid var(--line); border-radius: var(--radius); }
+    .summary li { display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; font-size: .92rem; border-bottom: 1px dashed var(--line); }
+    .summary li:last-child { border-bottom: 0; }
+    .summary span { color: var(--muted); }
+    .summary strong { text-align: end; font-weight: 500; }
+
+    /* ---------- Bottom bar (no header, slim footer only) ---------- */
+    .bottom { border-top: 1px solid var(--line); background: var(--surface); }
+    .f-stitch { display: block; width: min(100% - 40px, var(--container)); margin: 0 auto; border-top: 3px dashed var(--secondary); opacity: .6; }
+    .f-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; padding: 18px 0 22px; font-size: .88rem; }
+    .f-row p { margin: 0; color: var(--muted); }
+    .f-row ul { display: flex; gap: 22px; }
+    .f-row a { transition: color .3s; }
+    .f-row a:hover { color: var(--secondary); }
+
+    /* RTL + theme buttons (top right of the form panel, not a header) */
+    .tools { position: absolute; top: 20px; inset-inline-end: 24px; display: flex; gap: 10px; z-index: 5; }
+    .icon-btn {
+      width: 42px; height: 42px; display: grid; place-items: center; padding: 0;
+      background: transparent; color: var(--text);
+      border: 2px solid var(--line); border-radius: 50%;
+      transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .5s var(--ease);
+    }
+    .icon-btn:hover { background: var(--secondary); border-color: var(--secondary); color: var(--on-secondary); transform: rotate(180deg); }
+    .form-head { margin-top: 18px; }
+    @media (max-width: 620px) { .tools { top: 14px; inset-inline-end: 16px; } .icon-btn { width: 38px; height: 38px; } }
+    .i-sun { display: none; }
+    [data-theme="dark"] .i-sun { display: block; }
+    [data-theme="dark"] .i-moon { display: none; }
+
+    /* ---------- Keyframes ---------- */
+    @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12) translateX(-1.5%); } }
+    @keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .panel { grid-template-columns: 1fr; }
+      .brand-panel { padding: 44px 32px; }
+      .form-panel { padding: 44px 32px; }
+      .info-list { margin-top: 10px; }
+    }
+    @media (max-width: 620px) {
+      .page { padding: 28px 0 48px; }
+      .panel { border-radius: 22px; }
+      .brand-panel, .form-panel { padding: 34px 22px; }
+      .grid-2, .visit { grid-template-columns: 1fr; gap: 0; }
+      .visit { gap: 12px; }
+      .logo-img { width: 52px; height: 52px; }
+      .brand-name { font-size: 1.5rem; }
+      .f-row { justify-content: center; text-align: center; }
+      .submit-row .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+      .seal path { stroke-dashoffset: 0; }
+    }
+  </style>
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand" aria-label="AUREL home">
-      <img class="logo-img logo-light" src="/735e9904-bd19-4c59-94f9-e729f4ba6bff.png" alt="AUREL logo">
-      <img class="logo-img logo-dark" src="/b3f9ed93-58cc-4c50-a8bf-f6584e491061.png" alt="" aria-hidden="true">
-      <span class="brand-text"><span class="brand-name">AUREL</span><span class="brand-tag">Timeless &amp; classic</span></span>
-    </a>
-    <div class="header-actions">
-      <button class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
-        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
+  <main class="page" id="main">
+    <div class="container">
+      <div class="panel">
 
-<main class="page">
-  <div class="container grid">
+        <!-- ============ LEFT: logo + intro ============ -->
+        <aside class="brand-panel">
+          <a href="index.html" class="brand" aria-label="AUREL home">
+            <!-- Logo icon + wordmark. Brand panel is dark green, so the light-toned logo is used. -->
+            <img class="logo-img logo-light" src="/4db8457e-b27e-4777-99eb-f86f3e451edc.png" alt="AUREL logo">
+            <img class="logo-img logo-dark" src="/038eab0c-1804-4107-88d0-d3be6d946b68.png" alt="AUREL logo">
+            <span class="brand-text">
+              <span class="brand-name">AUREL</span>
+              <span class="brand-tag">Timeless &amp; classic</span>
+            </span>
+          </a>
 
-    <section>
-      <span class="eyebrow">Measurement Appointment</span>
-      <h1 class="title">Reserve your measurement at the studio</h1>
-      <p class="intro">Choose a day and time. We will talk through your design, fabric and delivery date, and take every measurement by hand.</p>
-      <ul class="facts">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>About 30 minutes per appointment</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open Mon - Sat, 10:00 AM - 7:00 PM</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free adjustment after your first wear</li>
-      </ul>
-      <div class="visual">
-        <div class="ring" aria-hidden="true"></div>
-        <figure class="frame">
-          <div class="media"><img src="https://media.istockphoto.com/id/1494908387/photo/happy-female-dressmaker-working-in-workshop-studio.jpg?s=170667a&w=0&k=20&c=QSY9qNAh_ZwVrfDCjI-c325M4P-z4VOKrp-43dA5uaM=" alt="Tailor measuring and sewing by hand in the studio" width="900" height="1100"></div>
-        </figure>
-        <div class="badge" aria-hidden="true"><span>Since</span><strong>2011</strong></div>
-      </div>
-    </section>
+          <span class="eyebrow">Book Measurement</span>
+          <h1>Your fit begins with a <em>measure</em> taken by hand.</h1>
+          <p class="lead">Reserve a 30-minute slot. We take your measurements, discuss design and fabric, and agree a delivery date together.</p>
 
-    <section class="card" id="appointment" aria-labelledby="formTitle">
-      <div class="tape" aria-hidden="true"></div>
+          <ul class="perks">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free measurement &amp; design consultation</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fabric swatches to choose in person</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free adjustment after your first wear</li>
+          </ul>
 
-      <form id="bookForm" novalidate>
-        <h2 id="formTitle">Book measurement</h2>
-        <p class="sub">Fill in your details and we will confirm by phone.</p>
-        <div class="fields">
-          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-          <div class="field"><label for="service">Garment</label>
-            <select id="service" name="service" required>
-              <option value="">Select a garment</option>
-              <option>Blouse</option><option>Suit</option><option>Kids wear</option><option>Custom design</option><option>Alteration</option>
-            </select></div>
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
-          <div class="field full">
-            <label id="slotLabel">Preferred time</label>
-            <div class="slots" role="radiogroup" aria-labelledby="slotLabel">
-              <label class="slot"><input type="radio" name="slot" value="10:00 AM" checked><span>10:00 AM</span></label>
-              <label class="slot"><input type="radio" name="slot" value="12:00 PM"><span>12:00 PM</span></label>
-              <label class="slot"><input type="radio" name="slot" value="2:00 PM"><span>2:00 PM</span></label>
-              <label class="slot"><input type="radio" name="slot" value="4:00 PM"><span>4:00 PM</span></label>
-              <label class="slot"><input type="radio" name="slot" value="6:00 PM"><span>6:00 PM</span></label>
+          <div class="bp-photo">
+            <div class="bp-ring" aria-hidden="true"></div>
+            <figure class="bp-frame">
+              <div class="bp-media">
+                <img src="https://media.istockphoto.com/id/873915448/photo/portrait-of-beautiful-seamstress.jpg?s=170667a&w=0&k=20&c=xYCZDKENK8-GXb_MK5Ij9d20ZPfYp06cY1X5cwzAJeo=" alt="Tailor taking measurements with a tape" width="680" height="750" loading="lazy">
+              </div>
+            </figure>
+            <span class="bp-badge" aria-hidden="true"><span>Since</span><strong>2011</strong></span>
+            <span class="bp-chip">Hand measured</span>
+          </div>
+
+          <ul class="info-list">
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Your street address, Anekal, Karnataka</span></li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Mon - Sat: 10:00 AM - 7:00 PM</span></li>
+          </ul>
+        </aside>
+
+        <!-- ============ RIGHT: booking form ============ -->
+        <section class="form-panel" id="formPanel" aria-labelledby="formTitle">
+          <div class="tools">
+            <button type="button" class="icon-btn" id="rtlToggle" aria-label="Toggle right-to-left layout" title="LTR / RTL">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h13M7 7l3-3M7 7l3 3M17 17H4M17 17l-3-3M17 17l-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+              <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
+          <div class="form-head">
+            <span class="eyebrow">Appointment</span>
+            <h2 id="formTitle">Reserve your measurement</h2>
+            <p>Tell us a little about your outfit and choose a time that suits you.</p>
+          </div>
+
+          <div class="stepper" aria-hidden="true"><span class="on" data-s="1"></span><span data-s="2"></span><span data-s="3"></span></div>
+
+          <form id="bookForm" novalidate>
+            <!-- Step 1: you -->
+            <div class="grid-2">
+              <div class="field">
+                <label class="label" for="name">Full name <i>*</i></label>
+                <input class="input" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                <p class="err">Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label class="label" for="phone">Phone <i>*</i></label>
+                <input class="input" id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" required>
+                <p class="err">Enter a valid 10-digit mobile number.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="email">Email <small style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)">(optional)</small></label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+              <p class="err">Enter a valid email address.</p>
+            </div>
+
+            <!-- Step 2: garment -->
+            <fieldset id="fsService">
+              <legend>What would you like stitched? <i>*</i></legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="service" value="Blouses"><span>Blouses</span></label>
+                <label class="chip"><input type="radio" name="service" value="Suits"><span>Suits</span></label>
+                <label class="chip"><input type="radio" name="service" value="Kids Wear"><span>Kids Wear</span></label>
+                <label class="chip"><input type="radio" name="service" value="Alterations"><span>Alterations</span></label>
+                <label class="chip"><input type="radio" name="service" value="Custom Designing"><span>Custom Designing</span></label>
+              </div>
+              <p class="err">Please choose a service.</p>
+            </fieldset>
+
+            <div class="grid-2">
+              <fieldset>
+                <legend>Number of garments</legend>
+                <div class="stepper-qty">
+                  <button type="button" id="qtyMinus" aria-label="Decrease">&minus;</button>
+                  <output id="qtyOut" aria-live="polite">1</output>
+                  <button type="button" id="qtyPlus" aria-label="Increase">+</button>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Where?</legend>
+                <div class="visit">
+                  <label class="chip"><input type="radio" name="visit" value="At the studio" checked><span>Studio visit</span></label>
+                  <label class="chip"><input type="radio" name="visit" value="Home visit"><span>Home visit</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Step 3: schedule -->
+            <div class="field" id="fDate">
+              <label class="label" for="date">Preferred date <i>*</i></label>
+              <input class="input" id="date" name="date" type="date" required>
+              <p class="err" id="dateErr">Please pick a date.</p>
+            </div>
+
+            <fieldset id="fsTime">
+              <legend>Preferred time <i>*</i></legend>
+              <div class="chips" id="slots"></div>
+              <p class="slot-note">We are open Monday to Saturday, 10:00 AM - 7:00 PM. Closed on Sundays.</p>
+              <p class="err">Please choose a time slot.</p>
+            </fieldset>
+
+            <div class="field">
+              <label class="label" for="notes">Notes <small style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)">(optional)</small></label>
+              <textarea class="input" id="notes" name="notes" placeholder="Occasion, design idea, fabric in hand, delivery date..."></textarea>
+            </div>
+
+            <div class="field" id="fConsent">
+              <label class="consent">
+                <input type="checkbox" id="consent" required>
+                <span>I agree to be contacted about this appointment and accept the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+              </label>
+              <p class="err">Please accept to continue.</p>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="btn btn-primary" id="submitBtn">Confirm Booking</button>
+              <small>No payment needed. We will confirm by phone.</small>
+            </div>
+          </form>
+
+          <!-- Success -->
+          <div class="success" role="status" aria-live="polite">
+            <div class="seal"><svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h2>Thank you, <span id="sName"></span></h2>
+            <p>Your measurement appointment is requested. Our team will call you shortly to confirm.</p>
+            <span class="ref" id="sRef"></span>
+            <ul class="summary" id="sList"></ul>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
+              <a href="index.html" class="btn btn-primary">Back to Home</a>
+              <button type="button" class="btn btn-secondary" id="againBtn">Book Another</button>
             </div>
           </div>
-          <div class="field full"><label for="notes">Design notes (optional)</label><textarea id="notes" name="notes" placeholder="Fabric, occasion or delivery date"></textarea></div>
-        </div>
-        <button class="btn" type="submit">Book Measurement</button>
-        <p class="note">No payment needed to reserve a slot.</p>
-      </form>
+        </section>
 
-      <div class="success" id="success" role="status" aria-live="polite" tabindex="-1">
-        <div class="tick"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h2>Request received</h2>
-        <p id="summary" style="color:var(--muted)"></p>
-        <a href="index.html" class="btn" style="width:auto;display:inline-flex">Back to Home</a>
       </div>
-    </section>
+    </div>
+  </main>
 
-  </div>
-</main>
+  <!-- Slim bottom bar (no header on this page) -->
+  <footer class="bottom">
+    <span class="f-stitch" aria-hidden="true"></span>
+    <div class="container f-row">
+      <p>&copy; <span id="year">2026</span> AUREL Tailoring &amp; Dress Stitching Studio. All rights reserved.</p>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; <span id="year">2026</span> AUREL Timeless &amp; classic. All rights reserved.</p>
-    <p>Anekal, Karnataka</p>
-  </div>
-</footer>
+  <script>
+  (function () {
+    'use strict';
+    var root = document.documentElement;
+    var $ = function (s, c) { return (c || document).querySelector(s); };
+    var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-<script>
-(function(){
-  'use strict';
-  var root=document.documentElement,$=function(s){return document.querySelector(s)};
-
-  $('#themeToggle').addEventListener('click',function(){
-    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
-    root.setAttribute('data-theme',n);
-    try{localStorage.setItem('aurel-theme',n)}catch(e){}
-  });
-  $('#rtlToggle').addEventListener('click',function(){
-    var n=root.getAttribute('dir')==='rtl'?'ltr':'rtl';
-    root.setAttribute('dir',n);
-    try{localStorage.setItem('aurel-dir',n)}catch(e){}
-  });
-
-  var date=$('#date'),today=new Date();
-  date.min=today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
-  $('#year').textContent=today.getFullYear();
-
-  var form=$('#bookForm');
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var ok=true,first=null;
-    ['name','phone','service','date'].forEach(function(id){
-      var el=document.getElementById(id),v=el.value.trim();
-      var bad=!v||(id==='phone'&&v.replace(/\D/g,'').length<10);
-      el.classList.toggle('invalid',bad);
-      el.setAttribute('aria-invalid',bad);
-      if(bad){ok=false;if(!first)first=el}
+    /* Theme */
+    $('#themeToggle').addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('aurel-theme', next); } catch (e) {}
     });
-    if(!ok){first.focus();return}
-    var slot=form.querySelector('input[name="slot"]:checked').value;
-    $('#summary').textContent='Thank you, '+$('#name').value.trim()+'. We will call to confirm your '+$('#service').value.toLowerCase()+' measurement on '+date.value+' at '+slot+'.';
-    /* Connect your backend or WhatsApp / email service here */
-    form.classList.add('hide');
-    var s=$('#success');s.classList.add('show');s.focus();
-  });
-})();
-</script>
+    /* RTL / LTR */
+    $('#rtlToggle').addEventListener('click', function () {
+      var next = root.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+      root.setAttribute('dir', next);
+      try { localStorage.setItem('aurel-dir', next); } catch (e) {}
+    });
+    $('#year').textContent = new Date().getFullYear();
+
+    /* Quantity */
+    var qty = 1, qtyOut = $('#qtyOut');
+    $('#qtyMinus').addEventListener('click', function () { qty = Math.max(1, qty - 1); qtyOut.textContent = qty; });
+    $('#qtyPlus').addEventListener('click', function () { qty = Math.min(20, qty + 1); qtyOut.textContent = qty; });
+
+    /* Date: today onwards, Sundays blocked */
+    var dateEl = $('#date');
+    function iso(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+    var today = new Date();
+    dateEl.min = iso(today);
+    var max = new Date(); max.setMonth(max.getMonth() + 3); dateEl.max = iso(max);
+
+    function parseLocal(v) { var p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+
+    /* Time slots: 10:00 - 18:30, every 30 min */
+    var slotsEl = $('#slots'), times = [];
+    for (var h = 10; h < 19; h++) { times.push([h, 0]); times.push([h, 30]); }
+    function fmt(h, m) {
+      var ap = h >= 12 ? 'PM' : 'AM', hh = h % 12 || 12;
+      return hh + ':' + String(m).padStart(2, '0') + ' ' + ap;
+    }
+    slotsEl.innerHTML = times.map(function (t, i) {
+      var label = fmt(t[0], t[1]);
+      return '<label class="chip"><input type="radio" name="time" value="' + label + '" data-h="' + t[0] + '" data-m="' + t[1] + '" id="t' + i + '"><span>' + label + '</span></label>';
+    }).join('');
+
+    function refreshSlots() {
+      var v = dateEl.value, isToday = v && v === iso(new Date()), now = new Date();
+      $$('input[name="time"]').forEach(function (r) {
+        var past = false;
+        if (isToday) {
+          var slot = new Date(); slot.setHours(+r.dataset.h, +r.dataset.m, 0, 0);
+          past = slot <= now;
+        }
+        r.disabled = past;
+        if (past && r.checked) r.checked = false;
+      });
+    }
+
+    /* Helpers */
+    function setInvalid(wrap, input, bad, msg) {
+      wrap.classList.toggle('invalid', bad);
+      if (input) input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad && msg) { var e = $('.err', wrap); if (e) e.textContent = msg; }
+    }
+    function wrapOf(el) { return el.closest('.field') || el.closest('fieldset'); }
+
+    var checks = {
+      name: function () { var el = $('#name'); var bad = el.value.trim().length < 2; setInvalid(wrapOf(el), el, bad); return !bad; },
+      phone: function () { var el = $('#phone'); var d = el.value.replace(/[\s\-+]/g, '').replace(/^91(?=\d{10}$)/, '').replace(/^0(?=\d{10}$)/, ''); var bad = !/^[6-9]\d{9}$/.test(d); setInvalid(wrapOf(el), el, bad); return !bad; },
+      email: function () { var el = $('#email'); var bad = el.value.trim() !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()); setInvalid(wrapOf(el), el, bad); return !bad; },
+      service: function () { var bad = !$('input[name="service"]:checked'); setInvalid($('#fsService'), null, bad); return !bad; },
+      date: function () {
+        var el = dateEl, bad = false, msg = 'Please pick a date.';
+        if (!el.value) bad = true;
+        else {
+          var d = parseLocal(el.value);
+          if (d.getDay() === 0) { bad = true; msg = 'We are closed on Sundays. Please choose another day.'; }
+          else if (el.value < el.min) { bad = true; msg = 'Please choose today or a later date.'; }
+        }
+        setInvalid($('#fDate'), el, bad, msg); return !bad;
+      },
+      time: function () { var bad = !$('input[name="time"]:checked'); setInvalid($('#fsTime'), null, bad); return !bad; },
+      consent: function () { var el = $('#consent'); var bad = !el.checked; setInvalid($('#fConsent'), el, bad); return !bad; }
+    };
+
+    /* Live validation + progress bar */
+    $('#name').addEventListener('blur', checks.name);
+    $('#phone').addEventListener('blur', checks.phone);
+    $('#email').addEventListener('blur', checks.email);
+    $('#phone').addEventListener('input', function () { this.value = this.value.replace(/[^\d\s+\-]/g, ''); });
+    dateEl.addEventListener('change', function () { checks.date(); refreshSlots(); progress(); });
+    $$('input[name="service"]').forEach(function (r) { r.addEventListener('change', function () { checks.service(); progress(); }); });
+    slotsEl.addEventListener('change', function () { checks.time(); progress(); });
+    $('#consent').addEventListener('change', checks.consent);
+    ['name', 'phone'].forEach(function (id) { $('#' + id).addEventListener('input', progress); });
+
+    function progress() {
+      var s1 = $('#name').value.trim().length > 1 && $('#phone').value.trim().length >= 10;
+      var s2 = !!$('input[name="service"]:checked');
+      var s3 = !!dateEl.value && !!$('input[name="time"]:checked');
+      $$('.stepper span').forEach(function (b, i) { b.classList.toggle('on', i === 0 || [s1, s2, s3][i - 1] || (i === 1 && s1) || (i === 2 && s2 && s1)); });
+      var bars = $$('.stepper span');
+      bars[0].classList.toggle('on', true);
+      bars[1].classList.toggle('on', s1);
+      bars[2].classList.toggle('on', s1 && s2);
+      if (s1 && s2 && s3) bars[2].classList.add('on');
+    }
+
+    /* Submit */
+    var form = $('#bookForm'), panel = $('#formPanel');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = true, firstBad = null;
+      ['name', 'phone', 'email', 'service', 'date', 'time', 'consent'].forEach(function (k) {
+        if (!checks[k]()) { ok = false; if (!firstBad) firstBad = k; }
+      });
+      if (!ok) {
+        var target = { name: '#name', phone: '#phone', email: '#email', service: '#fsService input', date: '#date', time: '#slots input:not(:disabled)', consent: '#consent' }[firstBad];
+        var t = $(target); if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'center' }); t.focus({ preventScroll: true }); }
+        return;
+      }
+
+      var data = {
+        name: $('#name').value.trim(),
+        phone: $('#phone').value.trim(),
+        email: $('#email').value.trim(),
+        service: $('input[name="service"]:checked').value,
+        garments: qty,
+        visit: $('input[name="visit"]:checked').value,
+        date: parseLocal(dateEl.value).toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
+        time: $('input[name="time"]:checked').value,
+        notes: $('#notes').value.trim()
+      };
+
+      var btn = $('#submitBtn');
+      btn.disabled = true; btn.textContent = 'Booking...';
+
+      /* TODO: send `data` to your backend / form service here, e.g.
+         fetch('/api/book-measurement', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+         For now the booking is simulated so the page works on its own. */
+      setTimeout(function () {
+        var ref = 'AUR-' + Math.random().toString(36).slice(2, 7).toUpperCase();
+        $('#sName').textContent = data.name.split(' ')[0];
+        $('#sRef').textContent = 'Ref: ' + ref;
+        var rows = [['Service', data.service], ['Garments', data.garments], ['Where', data.visit], ['Date', data.date], ['Time', data.time], ['Phone', data.phone]];
+        $('#sList').innerHTML = rows.map(function (r) { return '<li><span>' + r[0] + '</span><strong>' + String(r[1]).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }) + '</strong></li>'; }).join('');
+        panel.classList.add('done');
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        btn.disabled = false; btn.textContent = 'Confirm Booking';
+      }, 700);
+    });
+
+    $('#againBtn').addEventListener('click', function () {
+      form.reset(); qty = 1; qtyOut.textContent = 1;
+      $$('.invalid').forEach(function (n) { n.classList.remove('invalid'); });
+      refreshSlots(); progress();
+      panel.classList.remove('done');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    progress();
+  })();
+  </script>
 </body>
 </html>

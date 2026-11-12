@@ -1,4 +1,3 @@
-  /* AUREL - Home 1 scripts */
 (function () {
   'use strict';
 

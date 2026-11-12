@@ -1,4 +1,4 @@
- /* ---------- Design tokens ---------- */
+/* ---------- Design tokens ---------- */
 :root {
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -246,12 +246,23 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- 1. Hero (full viewport: background photo, framed photo, effects) ---------- */
 .hero {
+  /* Hero text colours. Light and dark theme both keep a dark hero background,
+     so only the dark-theme override below changes the text tones. */
+  --hero-title: #ffffff;
+  --hero-text: rgba(255, 255, 255, .86);
+  --hero-accent: var(--secondary);
+
   position: relative;
   min-height: calc(100svh - var(--header-h));
   display: flex; align-items: center;
   padding: 80px 0 150px;
   overflow: hidden; isolation: isolate;
-  background: #0a1914; color: #fff;
+  background: #0a1914; color: var(--hero-title);
+}
+[data-theme="dark"] .hero {
+  --hero-title: #f4ead2;   /* warm ivory headline */
+  --hero-text: #d8cfb8;    /* soft parchment body text */
+  --hero-accent: #e6cf97;  /* brighter antique gold for the italic word */
 }
 .hero-bg {
   position: absolute; inset: -20% 0 auto 0; width: 100%; height: 140%; object-fit: cover;
@@ -281,18 +292,18 @@ button { font: inherit; cursor: pointer; }
 .hero-content { min-width: 0; }
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  color: #fff; margin-bottom: .4em; perspective: 900px;
+  color: var(--hero-title); margin-bottom: .4em; perspective: 900px;
 }
 .hero-title .w {
   display: inline-block; transform-origin: 50% 100%;
   animation: wordIn 1s var(--ease) both;
   animation-delay: calc(.3s + var(--w, 0) * .12s);
 }
-.hero-title em { color: var(--secondary); font-style: italic; }
-.hero .lead { max-width: 560px; color: rgba(255, 255, 255, .86); font-size: 1.05rem; margin-bottom: 2em; }
-.hero .btn-secondary { color: #fff; }
+.hero-title em { color: var(--hero-accent); font-style: italic; }
+.hero .lead { max-width: 560px; color: var(--hero-text); font-size: 1.05rem; margin-bottom: 2em; }
+.hero .btn-secondary { color: var(--hero-title); }
 .hero .btn-secondary:hover { color: var(--on-secondary); }
-.hero-facts { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 40px; font-size: .9rem; color: rgba(255, 255, 255, .85); }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 40px; font-size: .9rem; color: var(--hero-text); }
 .hero-facts li { display: flex; align-items: center; gap: 10px; }
 .hero-facts svg { color: var(--secondary); flex: none; padding: 3px; border: 1.5px solid var(--secondary); border-radius: 50%; width: 24px; height: 24px; }
 
@@ -393,7 +404,7 @@ button { font: inherit; cursor: pointer; }
 }
 .ticker-track { display: flex; width: max-content; animation: ticker 32s linear infinite; }
 .ticker-set { display: flex; align-items: center; gap: 34px; padding-inline-end: 34px; }
-.ticker-set span { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: .06em; white-space: nowrap; color: #fff; }
+.ticker-set span { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: .06em; white-space: nowrap; color: var(--hero-title); }
 .ticker-set i { width: 8px; height: 8px; border-radius: 50%; background: var(--secondary); flex: none; }
 
 /* ---------- 2. Services ---------- */
@@ -443,7 +454,7 @@ button { font: inherit; cursor: pointer; }
 .a-stat strong::after { content: '+'; }
 .a-stat span { font-size: .88rem; color: var(--muted); }
 
-/* ---------- NEW: Horizontal scroll section (vertical scroll drives sideways movement) ---------- */
+/* ---------- Horizontal scroll section (vertical scroll drives sideways movement) ---------- */
 .hs { background: var(--primary); color: #fff; position: relative; }
 .hs-sticky {
   position: relative;
@@ -539,7 +550,7 @@ button { font: inherit; cursor: pointer; }
 }
 .fabric:hover figcaption { transform: translateY(0); color: var(--secondary); }
 
-/* ---------- NEW: Infinite photo marquee ---------- */
+/* ---------- Infinite photo marquee ---------- */
 .mq-section { padding: 100px 0; overflow: hidden; }
 .mq-wrap {
   display: grid; gap: 20px;
@@ -576,7 +587,7 @@ button { font: inherit; cursor: pointer; }
 .quote footer strong { display: block; font-family: var(--font-display); }
 .quote footer span { font-size: .82rem; color: var(--muted); }
 
-/* ---------- 7. NEW CTA: split panel with photo (directly above footer) ---------- */
+/* ---------- 7. CTA: split panel with photo (directly above footer) ---------- */
 .cta2 { padding: 100px 0; }
 .cta2-panel {
   position: relative; overflow: hidden; isolation: isolate;
@@ -663,13 +674,26 @@ button { font: inherit; cursor: pointer; }
   transform: translateY(-4px) rotateY(180deg);
 }
 
+/* ---------- Footer bottom bar (shared standard) ---------- */
 .footer-bottom { border-top: 1px solid var(--line); }
-.bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 20px 0; font-size: .88rem; color: var(--muted); }
-.bottom-inner p { margin: 0; }
-.legal { display: flex; gap: 24px; }
-.legal a { color: var(--text); transition: color .3s; }
-.legal a:hover { color: var(--primary); }
-[data-theme="dark"] .legal a:hover { color: var(--secondary); }
+.f-stitch {
+  display: block; width: min(100% - 40px, var(--container)); margin: 0 auto;
+  border-top: 3px dashed var(--secondary); opacity: .6;
+  transform-origin: left center; animation: fStitch 1.6s var(--ease) both;
+}
+[dir="rtl"] .f-stitch { transform-origin: right center; }
+.f-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 20px 0 24px; }
+.f-copy { margin: 0; font-size: .88rem; color: var(--muted); }
+.f-legal { display: flex; gap: 24px; }
+.f-legal a { color: var(--text); font-size: .88rem; transition: color .3s; }
+.f-legal a:hover { color: var(--primary); }
+[data-theme="dark"] .f-legal a:hover { color: var(--secondary); }
+.f-top {
+  width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%;
+  border: 2px solid var(--line); color: var(--text);
+  transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .4s var(--ease);
+}
+.f-top:hover { background: var(--secondary); border-color: var(--secondary); color: var(--on-secondary); transform: translateY(-3px); }
 
 /* ---------- Scroll reveal (2D + 3D) ---------- */
 .reveal { opacity: 0; transform: perspective(900px) translateY(50px) rotateX(14deg); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * .12s); }
@@ -717,6 +741,7 @@ button { font: inherit; cursor: pointer; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 @keyframes mqLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes mqRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes fStitch { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
@@ -778,7 +803,7 @@ button { font: inherit; cursor: pointer; }
   .logo-img { width: 40px; height: 40px; }
   .brand-name { font-size: 1.3rem; }
   .cols-4, .steps, .fabric-grid, .footer-grid { grid-template-columns: 1fr; }
-  .bottom-inner { justify-content: center; text-align: center; }
+  .f-row { justify-content: center; text-align: center; }
   .hero-facts { gap: 10px 20px; }
   .ticker-set span { font-size: .95rem; }
   .hv-chip { font-size: .72rem; padding: 7px 14px; }
