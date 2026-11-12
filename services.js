@@ -1,4 +1,4 @@
- /* AUREL - Services page scripts */
+/* AUREL - Services page scripts */
 (function () {
   'use strict';
 

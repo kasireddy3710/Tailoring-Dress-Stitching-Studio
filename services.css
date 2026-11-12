@@ -1,4 +1,4 @@
-/* ---------- Design tokens ---------- */
+ /* ---------- Design tokens ---------- */
 :root {
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -341,7 +341,10 @@ button { font: inherit; cursor: pointer; }
 .svc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .svc-row + .svc-row { margin-top: 130px; }
 .svc-row.rev .svc-media { order: 2; }
-.svc-media { position: relative; perspective: 1000px; }
+.svc-media {
+  position: relative; perspective: 1000px;
+  width: 100%; max-width: 400px; justify-self: center;
+}
 .svc-frame {
   position: relative; padding: 12px; border-radius: 200px 200px 16px 16px;
   border: 2px solid var(--secondary); background: var(--surface); box-shadow: var(--shadow-lg);
@@ -716,6 +719,7 @@ button { font: inherit; cursor: pointer; }
   .sh-index-list li { border-inline-start: 0 !important; border-top: 1px solid rgba(214, 187, 131, .2); }
   .sh-index-list li:first-child { border-top: 0; }
   .spec-grid { grid-template-columns: 1fr; }
+  .svc-media { max-width: 340px; }
   .svc-no { font-size: 4.5rem; }
   .faq-item summary { font-size: 1.05rem; }
 
