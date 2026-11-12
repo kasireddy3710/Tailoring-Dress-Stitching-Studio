@@ -1,10 +1,13 @@
-/* AUREL - Blog (AUREL Journal) scripts */
+ /* AUREL - Blog (AUREL Journal) scripts */
 (function () {
   'use strict';
 
   var root = document.documentElement;
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  var BASE_TITLE = document.title;
+  var ORDER = ['fitting', 'silk', 'care', 'kids', 'canvas'];   /* prev / next order */
 
   /* ---------- Theme toggle ---------- */
   $('#themeToggle').addEventListener('click', function () {
@@ -59,7 +62,6 @@
     bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
   /* ---------- Scroll reveal ---------- */
   var io = new IntersectionObserver(function (entries) {
@@ -89,38 +91,75 @@
     });
   }
 
-  /* ---------- Article reader ---------- */
-  var ar = $('#articleReader'), arBody = $('#arBody'), arTitle = $('#arTitle'),
-      arKicker = $('#arKicker'), arMeta = $('#arMeta'), arBar = $('#arProgress');
-  var lastRead = null;
+  /* ---------- Journal routing: list view <-> full article page ----------
+     #article/<id>  -> full article page
+     #<section id>  -> journal list, scrolled to that section
+     (no hash)      -> journal list                                         */
+  var listView = $('#listView'), articleView = $('#articleView');
 
-  $$('[data-article]').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var tpl = document.getElementById(btn.getAttribute('data-article'));
-      if (!tpl) return;
-      lastRead = btn;
-      arKicker.textContent = btn.getAttribute('data-kicker') || '';
-      arTitle.textContent = btn.getAttribute('data-title') || '';
-      arMeta.textContent = btn.getAttribute('data-meta') || '';
-      arBody.innerHTML = '';
-      arBody.appendChild(tpl.content.cloneNode(true));
-      arBody.scrollTop = 0;
-      arBar.style.transform = 'scaleX(0)';
-      if (typeof ar.showModal === 'function') ar.showModal();
-      else ar.setAttribute('open', '');
-    });
-  });
+  function postTpl(id) { return document.getElementById('post-' + id); }
 
-  $$('[data-ar-close]').forEach(function (b) {
-    b.addEventListener('click', function () { ar.close(); });
-  });
-  ar.addEventListener('click', function (e) { if (e.target === ar) ar.close(); });
-  ar.addEventListener('close', function () { if (lastRead) lastRead.focus(); });
-  arBody.addEventListener('scroll', function () {
-    var h = arBody.scrollHeight - arBody.clientHeight;
-    arBar.style.transform = 'scaleX(' + (h > 0 ? arBody.scrollTop / h : 0) + ')';
-  }, { passive: true });
+  function setPrevNext(a, id, label) {
+    var tpl = postTpl(id);
+    if (!tpl) return;
+    a.href = '#article/' + id;
+    a.innerHTML = '<small>' + label + '</small><span></span>';
+    a.querySelector('span').textContent = tpl.dataset.title || '';
+  }
+
+  function showArticle(id) {
+    var tpl = postTpl(id), d = tpl.dataset;
+
+    var cover = $('#apCover');
+    cover.src = d.image || '';
+    cover.alt = d.alt || '';
+    $('#apKicker').textContent = d.kicker || '';
+    $('#apCrumb').textContent = d.kicker || '';
+    $('#apTitle').textContent = d.title || '';
+    $('#apMeta').textContent = d.meta || '';
+
+    var body = $('#apBody');
+    body.innerHTML = '';
+    body.appendChild(tpl.content.cloneNode(true));
+
+    var i = ORDER.indexOf(id), n = ORDER.length;
+    setPrevNext($('#apPrev'), ORDER[(i - 1 + n) % n], 'Previous');
+    setPrevNext($('#apNext'), ORDER[(i + 1) % n], 'Next');
+
+    listView.hidden = true;
+    articleView.hidden = false;
+    document.title = (d.title || 'Article') + ' | AUREL Journal';
+    window.scrollTo(0, 0);
+    $('#apTitle').focus({ preventScroll: true });
+  }
+
+  function showList(target) {
+    var wasArticle = !articleView.hidden;
+    articleView.hidden = true;
+    listView.hidden = false;
+    document.title = BASE_TITLE;
+
+    if (target) {
+      var el = document.getElementById(target);
+      if (el) {
+        el.scrollIntoView({ behavior: wasArticle ? 'auto' : 'smooth', block: 'start' });
+        return;
+      }
+    }
+    if (wasArticle) window.scrollTo(0, 0);
+  }
+
+  function route() {
+    var h = location.hash.slice(1);
+    var m = h.match(/^article\/([a-z0-9-]+)$/i);
+    if (m && postTpl(m[1])) showArticle(m[1]);
+    else showList(h);
+    onScroll();
+  }
+
+  window.addEventListener('hashchange', route);
+  route();
+  onScroll();
 
   /* ---------- Footer year ---------- */
   var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
